@@ -15,11 +15,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "anticoagmonAppDelegate.h"
 
 int main(int argc, char *argv[])
 {
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-    int retVal = UIApplicationMain(argc, argv, nil, nil);
+    int retVal = UIApplicationMain(argc, argv, nil, @"anticoagmonAppDelegate");
     [pool release];
     return retVal;
     
