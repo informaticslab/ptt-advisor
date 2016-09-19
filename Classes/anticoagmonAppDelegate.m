@@ -37,8 +37,8 @@ AppManager *appMgr;
     UIImageView *splashView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
     DecisionVC *decisionVC = [[DecisionVC alloc] initWithNibName:@"DecisionView" bundle:nil];
     decisionVC.view.frame = [[UIScreen mainScreen] applicationFrame];
-    [self.window addSubview:decisionVC.view];
-
+    //[self.window addSubview:decisionVC.view];
+    [self.window setRootViewController:decisionVC];
     
     splashView.image = [UIImage imageNamed:@"Default.png"];
     [_window addSubview:splashView];
