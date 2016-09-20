@@ -117,7 +117,7 @@
 - (void)didDismissModalView {
     
     // Dismiss the modal view controller
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
     
 }
 

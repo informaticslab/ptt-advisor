@@ -37,7 +37,7 @@ AppManager *appMgr;
         name = newName;
         groupName = newGroupName;
         number = newNumber;
-        asText = [NSString stringWithFormat:@"%d:%@", newNumber, newName];
+        asText = [NSString stringWithFormat:@"%lu:%@", (unsigned long)newNumber, newName];
         decisionNodes = [[NSMutableDictionary alloc] init];
         footnotes = [[DTFootnotes alloc] init];
     }
@@ -85,19 +85,19 @@ AppManager *appMgr;
 
 -(NSString *)getKey
 {
-    return [NSString stringWithFormat:@"%d",self.number];
+    return [NSString stringWithFormat:@"%lu",(unsigned long)self.number];
 }
 
 +(NSString *)getKeyWithNumber:(NSUInteger)number
 {
-    return [NSString stringWithFormat:@"%d",number];
+    return [NSString stringWithFormat:@"%lu",(unsigned long)number];
 }
 
 
 -(NSString *)description
 {
     
-    return  [NSString stringWithFormat:@"DecisionTree: address=0x%x asText=%s number=%d name=%s", self, [self.asText UTF8String], self.number, self.name];
+    return  [NSString stringWithFormat:@"DecisionTree: asText=%s number=%lu name=%@", [self.asText UTF8String], (unsigned long)self.number, self.name];
 }
 
 

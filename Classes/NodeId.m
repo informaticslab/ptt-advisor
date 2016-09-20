@@ -27,7 +27,7 @@
     self = [super init];
     
     if (self) {
-        self.asText = [NSString stringWithFormat:@"%d:%d", newTreeNumber, newNodeNumber];
+        self.asText = [NSString stringWithFormat:@"%lu:%lu", (unsigned long)newTreeNumber, (unsigned long)newNodeNumber];
         self.treeNumber = newTreeNumber;
         self.nodeNumber = newNodeNumber;
     }
@@ -51,7 +51,7 @@
 -(NSString *)description
 {
     
-    return  [NSString stringWithFormat:@"NodeId: address=0x%x asText=%s treeNumber=%d nodeNumber=%d", self, [self.asText UTF8String], self.treeNumber, self.nodeNumber];
+    return  [NSString stringWithFormat:@"NodeId: asText=%s treeNumber=%lu nodeNumber=%lu", [self.asText UTF8String], (unsigned long)self.treeNumber, (unsigned long)self.nodeNumber];
 }
 
 @end

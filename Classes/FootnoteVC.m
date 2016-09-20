@@ -17,7 +17,7 @@
 #import "FootnoteVC.h"
 #import "AppManager.h"
 #import "DTNode.h"
-
+#import "TableViewHelper.h"
 
 @implementation FootnoteVC
 
@@ -72,14 +72,12 @@ AppManager *appMgr;
     return 1;
 }
 
-
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *currCellText = [self footnoteTextForRow:indexPath];
     
     CGSize constraintSize = CGSizeMake(280.0f, MAXFLOAT);
-    CGSize labelSize = [currCellText sizeWithFont:[UIFont fontWithName:@"Helvetica" size:14] constrainedToSize:constraintSize lineBreakMode:UILineBreakModeWordWrap];
+    CGSize labelSize = [TableViewHelper text:currCellText sizeWithFont:[UIFont fontWithName:@"Helvetica" size:14] constrainedToSize:constraintSize];
     
     return labelSize.height + 16;
     
@@ -135,7 +133,7 @@ AppManager *appMgr;
     // get the footnote
     cell.textLabel.text = [self footnoteTextForRow:indexPath]; 
 	
-	cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
+	cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
     cell.textLabel.numberOfLines = 0;
     [cell.textLabel sizeToFit];
     

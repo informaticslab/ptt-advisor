@@ -134,7 +134,7 @@ VisitedDecisionNodes *visitedNodes;
     //NSUInteger answeredQuestions = [visitedNodes getNodeCount] - 1;
     NSUInteger currReviewQuestion = [visitedNodes getCurrentNodeIndex] + 1; 
     
-    NSString *warningMessage = [NSString stringWithFormat:@"You are about to change your answer to Step %d. Therefore any previous responses past Step %d will be discarded and you will be presented with new questions and information at Step %d. Would you like to continue?", currReviewQuestion, currReviewQuestion, currReviewQuestion +1];
+    NSString *warningMessage = [NSString stringWithFormat:@"You are about to change your answer to Step %lu. Therefore any previous responses past Step %lu will be discarded and you will be presented with new questions and information at Step %lu. Would you like to continue?", (unsigned long)currReviewQuestion, (unsigned long)currReviewQuestion, currReviewQuestion +1];
     
     newChoiceConnector = newChoice;
     
@@ -154,7 +154,7 @@ VisitedDecisionNodes *visitedNodes;
 - (void)didDismissModalView {
     
     // Dismiss the modal view controller
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
     [self updateNodeUI];
     
 }
@@ -361,8 +361,8 @@ VisitedDecisionNodes *visitedNodes;
 
 
         if ([appMgr isDebugInfoEnabled]) {
-            labelBtn1Tree.text = [NSString stringWithFormat:@"Tree %d", btn1Connector.endNode.treeNumber];
-            labelBtn1Node.text = [NSString stringWithFormat:@"Node %d", btn1Connector.endNode.nodeNumber];
+            labelBtn1Tree.text = [NSString stringWithFormat:@"Tree %lu", (unsigned long)btn1Connector.endNode.treeNumber];
+            labelBtn1Node.text = [NSString stringWithFormat:@"Node %lu", (unsigned long)btn1Connector.endNode.nodeNumber];
         }
         
     }
@@ -379,8 +379,8 @@ VisitedDecisionNodes *visitedNodes;
         [btnAnswer2 setHidden:NO];
 
         if ([appMgr isDebugInfoEnabled]) {
-            labelBtn2Tree.text = [NSString stringWithFormat:@"Tree %d", btn2Connector.endNode.treeNumber];
-            labelBtn2Node.text = [NSString stringWithFormat:@"Node %d", btn2Connector.endNode.nodeNumber];
+            labelBtn2Tree.text = [NSString stringWithFormat:@"Tree %lu", (unsigned long)btn2Connector.endNode.treeNumber];
+            labelBtn2Node.text = [NSString stringWithFormat:@"Node %lu", (unsigned long)btn2Connector.endNode.nodeNumber];
         } 
     }
     
@@ -414,17 +414,17 @@ VisitedDecisionNodes *visitedNodes;
     
     // set page indication label
     if ([appMgr isDebugInfoEnabled]) {
-        debugInfo = [NSString stringWithFormat:@"Tree %d, Node %d, Footnotes %@",currNode.nodeId.treeNumber,currNode.nodeId.nodeNumber, [currNode getFootnoteIdsAsDebugInfo]];
+        debugInfo = [NSString stringWithFormat:@"Tree %lu, Node %lu, Footnotes %@",(unsigned long)currNode.nodeId.treeNumber,(unsigned long)currNode.nodeId.nodeNumber, [currNode getFootnoteIdsAsDebugInfo]];
         if (reviewing) {
-            lblCurrentPageIndicator.text = [NSString stringWithFormat:@"Step %d, %@",[visitedNodes getCurrentNodeIndex] +1, debugInfo];
+            lblCurrentPageIndicator.text = [NSString stringWithFormat:@"Step %lu, %@",[visitedNodes getCurrentNodeIndex] +1, debugInfo];
         } else {
-                lblCurrentPageIndicator.text = [NSString stringWithFormat:@"Step %d, %@",[visitedNodes getNodeCount], debugInfo];
+                lblCurrentPageIndicator.text = [NSString stringWithFormat:@"Step %lu, %@",(unsigned long)[visitedNodes getNodeCount], debugInfo];
         }
     } else {
         if (reviewing) 
-            lblCurrentPageIndicator.text = [NSString stringWithFormat:@"Step %d",[visitedNodes getCurrentNodeIndex] +1];
+            lblCurrentPageIndicator.text = [NSString stringWithFormat:@"Step %lu",[visitedNodes getCurrentNodeIndex] +1];
         else 
-            lblCurrentPageIndicator.text = [NSString stringWithFormat:@"Step %d",[visitedNodes getNodeCount]];
+            lblCurrentPageIndicator.text = [NSString stringWithFormat:@"Step %lu",(unsigned long)[visitedNodes getNodeCount]];
     }
     
     // should we enable back button

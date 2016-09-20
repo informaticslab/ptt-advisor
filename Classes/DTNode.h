@@ -62,7 +62,7 @@ typedef enum DecisionNodeTypes {
 
 -(void)addExitConnectorWithText:(NSString *)text exitTree:(NSUInteger)tree exitNode:(NSUInteger)node;
 -(void)addFootnoteId:(NSNumber *)newFootnoteId;
--(NSInteger)getFootnoteCount;
+-(NSUInteger)getFootnoteCount;
 -(BOOL)hasFootnotes;
 -(NSString *)getFootnoteAtIndex:(NSUInteger)aIndex;
 -(int)getFootnoteIdAtIndex:(NSUInteger)aIndex;

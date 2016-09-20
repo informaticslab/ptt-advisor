@@ -16,6 +16,7 @@
 
 #import "ReviewCell.h"
 #import "AppManager.h"
+#import "TableViewHelper.h"
 
 @implementation ReviewCell
 
@@ -38,7 +39,7 @@ AppManager *appMgr;
         
         appMgr = [AppManager singletonAppManager];
         
-        nodeLabel.lineBreakMode = UILineBreakModeWordWrap;
+        nodeLabel.lineBreakMode = NSLineBreakByWordWrapping;
         nodeLabel.contentMode = UIViewContentModeTop;
         nodeLabel.backgroundColor = [UIColor clearColor];
         nodeLabel.numberOfLines = 0;
@@ -47,7 +48,7 @@ AppManager *appMgr;
         connLabel.contentMode = UIViewContentModeTop;
         connLabel.backgroundColor = [UIColor clearColor];
         connLabel.textColor = [UIColor colorWithRed:(27.0/255) green:(109.0/255) blue:(120.0/255) alpha:1.0];
-        connLabel.lineBreakMode = UILineBreakModeWordWrap;
+        connLabel.lineBreakMode = NSLineBreakByWordWrapping;
         connLabel.numberOfLines = 1;
         connLabel.font = CONNECTOR_FONT;
 
@@ -89,9 +90,9 @@ AppManager *appMgr;
     }
     
     if (currIndexPath.section == 0)
-        formattedText = [NSString stringWithFormat:@"%d.  %@", currIndexPath.row + 1, nodeText]; 
+        formattedText = [NSString stringWithFormat:@"%ld.  %@", currIndexPath.row + 1, nodeText];
     else
-        formattedText = [NSString stringWithFormat:@"%d.  %@", [appMgr.dc.visitedNodes getNodeCount], nodeText];
+        formattedText = [NSString stringWithFormat:@"%lu.  %@", (unsigned long)[appMgr.dc.visitedNodes getNodeCount], nodeText];
     
     return formattedText;
     
@@ -104,7 +105,7 @@ AppManager *appMgr;
     CGSize nodeTextSize = CGSizeMake(0.0, 0.0);
     
     if (currNodeText != nil) 
-        nodeTextSize = [currNodeText sizeWithFont:NODE_FONT constrainedToSize:constraintSize lineBreakMode:UILineBreakModeWordWrap];
+        nodeTextSize = [TableViewHelper text:currNodeText sizeWithFont:NODE_FONT constrainedToSize:constraintSize];
     
     return nodeTextSize;
 }
@@ -120,10 +121,10 @@ AppManager *appMgr;
     CGSize connectorTextSize = CGSizeMake(0.0, 0.0);
     
     if (nodeText != nil) 
-        nodeTextSize = [nodeText sizeWithFont:NODE_FONT constrainedToSize:constraintSize lineBreakMode:UILineBreakModeWordWrap];
+        nodeTextSize = [TableViewHelper text:nodeText sizeWithFont:NODE_FONT constrainedToSize:constraintSize];
     
     if (connectorText != nil) 
-        connectorTextSize = [connectorText sizeWithFont:CONNECTOR_FONT];
+        connectorTextSize = [TableViewHelper text:connectorText sizeWithFont:CONNECTOR_FONT];
         
     return  nodeTextSize.height + connectorTextSize.height + (2 * CELL_PADDING);
 

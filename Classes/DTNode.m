@@ -101,7 +101,7 @@ AppManager *appMgr;
     [self.footnoteIds addObject:newFootnoteId];
 }
 
--(NSInteger)getFootnoteCount
+-(NSUInteger)getFootnoteCount
 {
     return [self.footnoteIds count];
 }
@@ -134,7 +134,7 @@ AppManager *appMgr;
 
     NSString *debugInfo = [NSString stringWithFormat:@"("];
     int index = 0;
-    int idCount = [self getFootnoteCount];
+    NSUInteger idCount = [self getFootnoteCount];
 
     if (idCount == 0)
         return @"()";
@@ -207,7 +207,7 @@ AppManager *appMgr;
 -(NSString *)description
 {
     
-    return  [NSString stringWithFormat:@"DTNode: address=0x%x, body text=%s", self, [self.bodyText UTF8String]];
+    return  [NSString stringWithFormat:@"DTNode: body text=%s", [self.bodyText UTF8String]];
 
 }
 

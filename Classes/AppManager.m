@@ -51,7 +51,7 @@ static AppManager *sharedAppManager = nil;
 	return self;
 }
 
-- (unsigned)retainCount {
+- (unsigned long)retainCount {
 	return UINT_MAX; //denotes an object that cannot be released
 }
 
@@ -82,7 +82,7 @@ static AppManager *sharedAppManager = nil;
 
 -(NSString *)debugLabelText
 {
-    return [NSString stringWithFormat:@"Tree=%d, Node=%d, Footnotes=%d", self.dc.currDecisionTree.number, self.dc.currDecisionTree.number, [self.dc.currDecisionTree.footnotes getCount]];
+    return [NSString stringWithFormat:@"Tree=%lu, Node=%lu, Footnotes=%lu", (unsigned long)self.dc.currDecisionTree.number, (unsigned long)self.dc.currDecisionTree.number, (unsigned long)[self.dc.currDecisionTree.footnotes getCount]];
 }
 
 -(BOOL)isDebugInfoEnabled

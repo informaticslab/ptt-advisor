@@ -74,7 +74,7 @@
 -(NSString *)description
 {
     
-    return  [NSString stringWithFormat:@"DTConnector: address=0x%x, text=%s", self, [self.text UTF8String]];
+    return  [NSString stringWithFormat:@"DTConnector: address=0x%@, text=%s", self, [self.text UTF8String]];
 }
 
 
