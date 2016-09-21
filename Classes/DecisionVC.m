@@ -7,7 +7,7 @@
 //
 //     http://www.apache.org/licenses/LICENSE-2.0
 //
-//  Unless required by applicable law or agreed to in writing, software 
+//  Unless required by applicable law or agreed to in writing, software
 //  distributed under the License is distributed on an "AS IS" BASIS,
 //  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //  See the License for the specific language governing permissions and
@@ -44,7 +44,7 @@ VisitedDecisionNodes *visitedNodes;
 {
     
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) 
+    if (self)
     {
         // Custom initialization
         UIButton *btnInfo =  [UIButton buttonWithType:UIButtonTypeCustom];
@@ -54,13 +54,13 @@ VisitedDecisionNodes *visitedNodes;
         //create a UIBarButtonItem with the button as a custom view
         barBtnItemInfo.customView = btnInfo;
         barBtnItemInfo.style = UIBarButtonItemStylePlain;
-
-
+        
+        
         UIFont *customFont = [UIFont fontWithName:@"LucidaGrande" size:17];
         nodeText.font = customFont;
         
         appMgr = [AppManager singletonAppManager];
-
+        
         
     }
     return self;
@@ -92,7 +92,7 @@ VisitedDecisionNodes *visitedNodes;
 
 - (IBAction)btnAnswer1TouchUp:(id)sender {
     
-    if ([visitedNodes hasDifferentChosenConnectorForCurrentNode:btn1Connector]) 
+    if ([visitedNodes hasDifferentChosenConnectorForCurrentNode:btn1Connector])
         [self changeDecision:btn1Connector];
     else
         [visitedNodes goToNodeUsingConnector:btn1Connector];
@@ -103,7 +103,7 @@ VisitedDecisionNodes *visitedNodes;
 
 - (IBAction)btnAnswer2TouchUp:(id)sender {
     
-    if ([visitedNodes hasDifferentChosenConnectorForCurrentNode:btn2Connector]) 
+    if ([visitedNodes hasDifferentChosenConnectorForCurrentNode:btn2Connector])
         [self changeDecision:btn2Connector];
     else
         [visitedNodes goToNodeUsingConnector:btn2Connector];
@@ -114,17 +114,32 @@ VisitedDecisionNodes *visitedNodes;
 
 - (IBAction)btnDoneTouchUp:(id)sender {
     
-    UIAlertView *alert = [[UIAlertView alloc]
-                          initWithTitle: @"Patient Evaluation Complete"
-                          message: @"Would you like to begin a new patient evaluation?"
-                          delegate: self
-                          cancelButtonTitle:@"Cancel"
-                          otherButtonTitles:@"Yes",nil];
-// No Take Survey Button for now.                         otherButtonTitles:@"New Evaluation",@"Take Survey",nil];
-    alert.tag = DONE_RESTART_ALERT_VIEW_TAG;
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Patient Evaluation Complete"
+                                                                   message:@"Would you like to begin a new patient evaluation?"
+                                                            preferredStyle:UIAlertControllerStyleAlert];
     
-    [alert show];
-    [alert release];
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"Yes"
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action)
+                                    {
+                                        DebugLog(@"User hit Yes on Begin New Evaluation Alert.");
+                                        [visitedNodes restart];
+                                        [self updateNodeUI];
+                                        
+                                        
+                                    }];
+    [alert addAction:defaultAction];
+    
+    UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Cancel"
+                                                           style:UIAlertActionStyleCancel
+                                                         handler:^(UIAlertAction * action)
+                                   {
+                                       DebugLog(@"User hit Cancel on Begin New Evaluation Alert.");
+                                       
+                                   }];
+    [alert addAction:cancelAction];
+    [self presentViewController:alert animated:YES completion:nil];
+    
     
 }
 
@@ -132,22 +147,37 @@ VisitedDecisionNodes *visitedNodes;
 {
     
     //NSUInteger answeredQuestions = [visitedNodes getNodeCount] - 1;
-    NSUInteger currReviewQuestion = [visitedNodes getCurrentNodeIndex] + 1; 
+    NSUInteger currReviewQuestion = [visitedNodes getCurrentNodeIndex] + 1;
     
     NSString *warningMessage = [NSString stringWithFormat:@"You are about to change your answer to Step %lu. Therefore any previous responses past Step %lu will be discarded and you will be presented with new questions and information at Step %lu. Would you like to continue?", (unsigned long)currReviewQuestion, (unsigned long)currReviewQuestion, currReviewQuestion +1];
     
     newChoiceConnector = newChoice;
     
-    UIAlertView *alert = [[UIAlertView alloc]
-                          initWithTitle: @"Change Decision Warning"
-                          message: warningMessage
-                          delegate: self
-                          cancelButtonTitle:@"Cancel"
-                          otherButtonTitles:@"OK",nil];
-    alert.tag = CHANGE_DECISION_ALERT_VIEW_TAG;
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Change Decision Warning"
+                                                                   message:warningMessage
+                                                            preferredStyle:UIAlertControllerStyleAlert];
     
-    [alert show];
-    [alert release];
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK"
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action)
+                                    {
+                                        DebugLog(@"User hit OK on Change Evaluation Alert.");
+                                        [visitedNodes redoFromCurrentNodeUsingConnector:newChoiceConnector];
+                                        [self updateNodeUI];
+                                    }];
+    [alert addAction:defaultAction];
+    
+    UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Cancel"
+                                                           style:UIAlertActionStyleCancel
+                                                         handler:^(UIAlertAction * action)
+                                   {
+                                       DebugLog(@"User hit Cancel on Change Evaluation Alert.");
+                                       newChoiceConnector = nil;
+                                       
+                                   }];
+    [alert addAction:cancelAction];
+    [self presentViewController:alert animated:YES completion:nil];
+    
     
 }
 
@@ -159,20 +189,20 @@ VisitedDecisionNodes *visitedNodes;
     
 }
 
-- (IBAction)barBtnBackTouchUp:(id)sender 
+- (IBAction)barBtnBackTouchUp:(id)sender
 {
     [visitedNodes getPreviousNode];
     [self updateNodeUI];
     
 }
 
-- (IBAction)barBtnNextTouchUp:(id)sender 
+- (IBAction)barBtnNextTouchUp:(id)sender
 {
     
     [visitedNodes getNextNode];
     [self updateNodeUI];
     
-
+    
 }
 
 - (IBAction)barBtnBackToLastTouchUp:(id)sender {
@@ -183,81 +213,48 @@ VisitedDecisionNodes *visitedNodes;
 }
 
 - (IBAction)barBtnRestartEvalTouchUp:(id)sender {
-    UIAlertView *alert = [[UIAlertView alloc]
-                          initWithTitle: @"Restart Patient Evaluation"
-                          message: @"Are you sure you want to restart the patient evaluation?"
-                          delegate: self
-                          cancelButtonTitle:@"Cancel"
-                          otherButtonTitles:@"OK",nil];
-    alert.tag = RESTART_ALERT_VIEW_TAG;
-    [alert show];
-    [alert release];
+    
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Restart Patient Evaluation"
+                                                                   message:@"Are you sure you want to restart the patient evaluation?"
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK"
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action)
+                                    {
+                                        DebugLog(@"User hit OK on Reset Evaluation Alert View.");
+                                        [visitedNodes restart];
+                                        [self updateNodeUI];
+                                    }];
+    [alert addAction:defaultAction];
+    
+    UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Cancel"
+                                                           style:UIAlertActionStyleCancel
+                                                         handler:^(UIAlertAction * action)
+                                   {
+                                       DebugLog(@"User hit Cancel on Reset Evaluation Alert View.");
+                                   }];
+    [alert addAction:cancelAction];
+    [self presentViewController:alert animated:YES completion:nil];
     
 }
 
-- (IBAction)barBtnReviewEvalTouchUp:(id)sender 
+- (IBAction)barBtnReviewEvalTouchUp:(id)sender
 {
     
     // Create the modal view controller
     DecisionHistoryVC *viewController = [[DecisionHistoryVC alloc] initWithNibName:@"DecisionHistoryVC" bundle:nil];
     
     // we are the delegate that is responsible for dismissing the help view
-	viewController.delegate = self;
-	viewController.modalPresentationStyle = UIModalPresentationFullScreen;
-	[self presentModalViewController:viewController animated:YES];
+    viewController.delegate = self;
+    viewController.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self presentModalViewController:viewController animated:YES];
     
     // Clean up resources
     [viewController release];
     
 }
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    
-    if (alertView.tag == CHANGE_DECISION_ALERT_VIEW_TAG) {
-        if (buttonIndex == 0) {
-            DebugLog(@"User hit Cancel on Change Evaluation Alert View.");
-            newChoiceConnector = nil;
-        }
-        else {
-            DebugLog(@"User hit OK on Change Evaluation Alert View.");
-            [visitedNodes redoFromCurrentNodeUsingConnector:newChoiceConnector];
-            [self updateNodeUI];            
-        }
-    } else if (alertView.tag == DONE_RESTART_ALERT_VIEW_TAG) {
-
-        if (buttonIndex == 0) {
-            DebugLog(@"User hit Cancel on Reset Evaluation Alert View.");
-        }
-        else if (buttonIndex == 1) {
-            DebugLog(@"User hit OK on Reset Evaluation Alert View.");
-            [visitedNodes restart];
-            [self updateNodeUI];
-            
-        }
-        else if (buttonIndex == 2) {
-            DebugLog(@"User hit Survey on Reset Evaluation Alert View.");
-            NSURL *url = [NSURL URLWithString:@"http://www.surveygizmo.com/s3/620161/PTT-Advisor-Survey-Test"];
-            [[UIApplication sharedApplication] openURL:url];
-            [visitedNodes restart];
-            [self updateNodeUI];
-            
-        }
-      
-        
-    } else if (alertView.tag == RESTART_ALERT_VIEW_TAG){
-    
-        
-        if (buttonIndex == 0) {
-            DebugLog(@"User hit Cancel on Reset Evaluation Alert View.");
-        }
-        else {
-            DebugLog(@"User hit OK on Reset Evaluation Alert View.");
-            [visitedNodes restart];
-            [self updateNodeUI];
-            
-        }
-    }
-}
 
 - (void)didReceiveMemoryWarning
 {
@@ -281,9 +278,9 @@ VisitedDecisionNodes *visitedNodes;
     AboutVC *aboutVC = [[AboutVC alloc] initWithNibName:@"AboutView" bundle:nil];
     
     // we are the delegate that is responsible for dismissing the help view
-	aboutVC.delegate = self;
-	aboutVC.modalPresentationStyle = UIModalPresentationFullScreen;
-	[self presentModalViewController:aboutVC animated:YES];
+    aboutVC.delegate = self;
+    aboutVC.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self presentModalViewController:aboutVC animated:YES];
     
     // Clean up resources
     [aboutVC release];
@@ -295,13 +292,13 @@ VisitedDecisionNodes *visitedNodes;
     FootnoteVC *footnoteVC = [[FootnoteVC alloc] initWithNibName:@"FootnoteVC" bundle:nil];
     
     // we are the delegate that is responsible for dismissing the help view
-	footnoteVC.delegate = self;
-	footnoteVC.modalPresentationStyle = UIModalPresentationFullScreen;
-	[self presentModalViewController:footnoteVC animated:YES];
+    footnoteVC.delegate = self;
+    footnoteVC.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self presentModalViewController:footnoteVC animated:YES];
     
     // Clean up resources
     [footnoteVC release];
- 
+    
 }
 
 
@@ -310,9 +307,9 @@ VisitedDecisionNodes *visitedNodes;
     HelpVC *helpVC = [[HelpVC alloc] initWithNibName:@"HelpVC" bundle:nil];
     
     // we are the delegate that is responsible for dismissing the help view
-	helpVC.delegate = self;
-	helpVC.modalPresentationStyle = UIModalPresentationFullScreen;
-	[self presentModalViewController:helpVC animated:YES];
+    helpVC.delegate = self;
+    helpVC.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self presentModalViewController:helpVC animated:YES];
     
     // Clean up resources
     [helpVC release];
@@ -325,7 +322,7 @@ VisitedDecisionNodes *visitedNodes;
     DTNode *currNode;
     DTConnector *chosenConnector;
     NSString *debugInfo = nil;
-
+    
     NSUInteger answerCount;
     BOOL reviewing = ![visitedNodes isAtUnansweredNode];
     
@@ -334,7 +331,7 @@ VisitedDecisionNodes *visitedNodes;
     chosenConnector = visitedNodes.chosenConnector;
     
     [nodeText setText:currNode.bodyText];
-    if ([currNode.bodyText length] > 160) 
+    if ([currNode.bodyText length] > 160)
         nodeText.font = [UIFont fontWithName:@"Helvetica" size:14.0f];
     else
         nodeText.font = [UIFont fontWithName:@"Helvetica" size:16.0f];
@@ -358,8 +355,8 @@ VisitedDecisionNodes *visitedNodes;
         
         [btnAnswer1 setTitle:btn1Connector.text forState:UIControlStateNormal];
         [btnAnswer1 setHidden:NO];
-
-
+        
+        
         if ([appMgr isDebugInfoEnabled]) {
             labelBtn1Tree.text = [NSString stringWithFormat:@"Tree %lu", (unsigned long)btn1Connector.endNode.treeNumber];
             labelBtn1Node.text = [NSString stringWithFormat:@"Node %lu", (unsigned long)btn1Connector.endNode.nodeNumber];
@@ -377,11 +374,11 @@ VisitedDecisionNodes *visitedNodes;
         
         [btnAnswer2 setTitle:btn2Connector.text forState:UIControlStateNormal];
         [btnAnswer2 setHidden:NO];
-
+        
         if ([appMgr isDebugInfoEnabled]) {
             labelBtn2Tree.text = [NSString stringWithFormat:@"Tree %lu", (unsigned long)btn2Connector.endNode.treeNumber];
             labelBtn2Node.text = [NSString stringWithFormat:@"Node %lu", (unsigned long)btn2Connector.endNode.nodeNumber];
-        } 
+        }
     }
     
     if ( (answerCount == 0) && ([currNode isLastNode])) {
@@ -407,7 +404,7 @@ VisitedDecisionNodes *visitedNodes;
         barBtnItemFootnotes.enabled = TRUE;
     else
         barBtnItemFootnotes.enabled = FALSE;
-
+    
     [iconImage setImage:currImage];
     
     self.toolbarText.text = appMgr.dc.currDecisionTree.groupName;
@@ -418,12 +415,12 @@ VisitedDecisionNodes *visitedNodes;
         if (reviewing) {
             lblCurrentPageIndicator.text = [NSString stringWithFormat:@"Step %lu, %@",[visitedNodes getCurrentNodeIndex] +1, debugInfo];
         } else {
-                lblCurrentPageIndicator.text = [NSString stringWithFormat:@"Step %lu, %@",(unsigned long)[visitedNodes getNodeCount], debugInfo];
+            lblCurrentPageIndicator.text = [NSString stringWithFormat:@"Step %lu, %@",(unsigned long)[visitedNodes getNodeCount], debugInfo];
         }
     } else {
-        if (reviewing) 
+        if (reviewing)
             lblCurrentPageIndicator.text = [NSString stringWithFormat:@"Step %lu",[visitedNodes getCurrentNodeIndex] +1];
-        else 
+        else
             lblCurrentPageIndicator.text = [NSString stringWithFormat:@"Step %lu",(unsigned long)[visitedNodes getNodeCount]];
     }
     
@@ -441,7 +438,7 @@ VisitedDecisionNodes *visitedNodes;
         barBtnNext.enabled = FALSE;
         barBtnBackToLast.enabled = FALSE;
     }
-
+    
     // should we enable next button or jump?
     if ([visitedNodes isAtFirstNode] && [visitedNodes isAtUnansweredNode] ) {
         barBtnRestartEval.enabled = FALSE;
@@ -451,7 +448,7 @@ VisitedDecisionNodes *visitedNodes;
         barBtnReviewEval.enabled = TRUE;
     }
     
-
+    
 }
 
 - (void)presentEulaModalView
@@ -462,14 +459,14 @@ VisitedDecisionNodes *visitedNodes;
     
     // store the data
     NSDictionary *appInfo = [[NSBundle mainBundle] infoDictionary];
-    NSString *currVersion = [NSString stringWithFormat:@"%@.%@", 
-                             [appInfo objectForKey:@"CFBundleShortVersionString"], 
+    NSString *currVersion = [NSString stringWithFormat:@"%@.%@",
+                             [appInfo objectForKey:@"CFBundleShortVersionString"],
                              [appInfo objectForKey:@"CFBundleVersion"]];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *lastVersionEulaAgreed = (NSString *)[defaults objectForKey:@"agreedToEulaForVersion"];
     
     
-    // was the version number the last time EULA was seen and agreed to the 
+    // was the version number the last time EULA was seen and agreed to the
     // same as the current version, if not show EULA and store the version number
     if (![currVersion isEqualToString:lastVersionEulaAgreed]) {
         [defaults setObject:currVersion forKey:@"agreedToEulaForVersion"];
@@ -486,7 +483,7 @@ VisitedDecisionNodes *visitedNodes;
         [self presentModalViewController:eulaVC animated:YES];
         
     }
-
+    
     
 }
 
@@ -497,7 +494,7 @@ VisitedDecisionNodes *visitedNodes;
     
     [super viewDidLoad];
     appMgr = [AppManager singletonAppManager];
-    visitedNodes = appMgr.dc.visitedNodes;    
+    visitedNodes = appMgr.dc.visitedNodes;
     [self updateNodeUI];
     
 }
