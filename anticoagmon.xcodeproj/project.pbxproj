@@ -50,7 +50,6 @@
 		375BC87713968D7900491014 /* done_icon_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 375BC87413968D7900491014 /* done_icon_down@2x.png */; };
 		375BC87813968D7900491014 /* Done_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 375BC87513968D7900491014 /* Done_icon@2x.png */; };
 		375BC87A13968DB900491014 /* ptt_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 375BC87913968DB900491014 /* ptt_icon@2x.png */; };
-		3781E4D21D9054D100FD8C84 /* WPSAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3781E4D11D9054D100FD8C84 /* WPSAlertController.m */; };
 		3781E4D41D905F3E00FD8C84 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3781E4D31D905F3E00FD8C84 /* Default-568h@2x.png */; };
 		3781E4D61D90633700FD8C84 /* TableViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3781E4D51D90633700FD8C84 /* TableViewHelper.m */; };
 		3790105C1385B3E100565B0C /* eula.html in Resources */ = {isa = PBXBuildFile; fileRef = 3790105B1385B3E100565B0C /* eula.html */; };
@@ -200,8 +199,6 @@
 		375BC87413968D7900491014 /* done_icon_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "done_icon_down@2x.png"; sourceTree = "<group>"; };
 		375BC87513968D7900491014 /* Done_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Done_icon@2x.png"; sourceTree = "<group>"; };
 		375BC87913968DB900491014 /* ptt_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ptt_icon@2x.png"; sourceTree = "<group>"; };
-		3781E4D01D9054D100FD8C84 /* WPSAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPSAlertController.h; sourceTree = "<group>"; };
-		3781E4D11D9054D100FD8C84 /* WPSAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPSAlertController.m; sourceTree = "<group>"; };
 		3781E4D31D905F3E00FD8C84 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3781E4D51D90633700FD8C84 /* TableViewHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewHelper.m; sourceTree = "<group>"; };
 		3781E4D71D90636C00FD8C84 /* TableViewHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewHelper.h; sourceTree = "<group>"; };
@@ -460,8 +457,6 @@
 		374EDC84133111A100AFFE56 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				3781E4D01D9054D100FD8C84 /* WPSAlertController.h */,
-				3781E4D11D9054D100FD8C84 /* WPSAlertController.m */,
 				374EDC87133111A100AFFE56 /* AboutVC.h */,
 				374EDC88133111A100AFFE56 /* AboutVC.m */,
 				374EDC85133111A100AFFE56 /* anticoagmonAppDelegate.h */,
@@ -693,7 +688,6 @@
 				374EDCA0133111DA00AFFE56 /* DecisionTree.m in Sources */,
 				374EDCA1133111DA00AFFE56 /* PatientEvaluation.m in Sources */,
 				374EDCA2133111DA00AFFE56 /* VisitedDecisionNodes.m in Sources */,
-				3781E4D21D9054D100FD8C84 /* WPSAlertController.m in Sources */,
 				374EDCA51331338A00AFFE56 /* NodeId.m in Sources */,
 				37EBFB381333E20F00185EFF /* DTConnector.m in Sources */,
 				3701CC6A13413632001890F0 /* EvalsViewController.m in Sources */,
