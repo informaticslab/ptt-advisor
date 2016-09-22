@@ -66,29 +66,6 @@ VisitedDecisionNodes *visitedNodes;
     return self;
 }
 
-- (void)dealloc
-{
-    [nodeText release];
-    [btnAnswer1 release];
-    [btnAnswer2 release];
-    [toolbarText release];
-    [doneImage release];
-    [iconImage release];
-    [btnDone release];
-    [barBtnBack release];
-    [barBtnNext release];
-    [barBtnBackToLast release];
-    [barBtnRestartEval release];
-    [barBtnReviewEval release];
-    [lblCurrentPageIndicator release];
-    [barBtnItemInfo release];
-    [barBtnItemFootnotes release];
-    [labelBtn1Tree release];
-    [labelBtn1Node release];
-    [labelBtn2Tree release];
-    [labelBtn2Node release];
-    [super dealloc];
-}
 
 - (IBAction)btnAnswer1TouchUp:(id)sender {
     
@@ -251,7 +228,6 @@ VisitedDecisionNodes *visitedNodes;
     [self presentModalViewController:viewController animated:YES];
     
     // Clean up resources
-    [viewController release];
     
 }
 
@@ -283,7 +259,6 @@ VisitedDecisionNodes *visitedNodes;
     [self presentModalViewController:aboutVC animated:YES];
     
     // Clean up resources
-    [aboutVC release];
     
 }
 
@@ -297,7 +272,6 @@ VisitedDecisionNodes *visitedNodes;
     [self presentModalViewController:footnoteVC animated:YES];
     
     // Clean up resources
-    [footnoteVC release];
     
 }
 
@@ -312,7 +286,6 @@ VisitedDecisionNodes *visitedNodes;
     [self presentModalViewController:helpVC animated:YES];
     
     // Clean up resources
-    [helpVC release];
     
     
 }
@@ -511,43 +484,24 @@ VisitedDecisionNodes *visitedNodes;
 
 - (void)viewDidUnload
 {
-    [nodeText release];
     nodeText = nil;
-    [btnAnswer1 release];
     btnAnswer1 = nil;
-    [btnAnswer2 release];
     btnAnswer2 = nil;
-    [toolbarText release];
     toolbarText = nil;
-    [doneImage release];
     doneImage = nil;
-    [iconImage release];
     iconImage = nil;
-    [btnDone release];
     btnDone = nil;
-    [barBtnBack release];
     barBtnBack = nil;
-    [barBtnNext release];
     barBtnNext = nil;
-    [barBtnBackToLast release];
     barBtnBackToLast = nil;
-    [barBtnRestartEval release];
     barBtnRestartEval = nil;
-    [barBtnReviewEval release];
     barBtnReviewEval = nil;
-    [lblCurrentPageIndicator release];
     lblCurrentPageIndicator = nil;
-    [barBtnItemInfo release];
     barBtnItemInfo = nil;
-    [barBtnItemFootnotes release];
     barBtnItemFootnotes = nil;
-    [labelBtn1Tree release];
     labelBtn1Tree = nil;
-    [labelBtn1Node release];
     labelBtn1Node = nil;
-    [labelBtn2Tree release];
     labelBtn2Tree = nil;
-    [labelBtn2Node release];
     labelBtn2Node = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.

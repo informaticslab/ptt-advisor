@@ -34,8 +34,8 @@ AppManager *appMgr;
         nodeLabel = [[UILabel alloc] initWithFrame:CGRectZero];
         connLabel = [[UILabel alloc] initWithFrame:CGRectZero];
         
-        self.backgroundView = [[[UIImageView alloc] init] autorelease];
-        self.selectedBackgroundView = [[[UIImageView alloc] init] autorelease];
+        self.backgroundView = [[UIImageView alloc] init];
+        self.selectedBackgroundView = [[UIImageView alloc] init];
         
         appMgr = [AppManager singletonAppManager];
         
@@ -241,12 +241,5 @@ AppManager *appMgr;
 }
 
 
-- (void)dealloc
-{
-    [imageView release];
-    [nodeLabel release];
-    [connLabel release];
-    [super dealloc];
-}
 
 @end

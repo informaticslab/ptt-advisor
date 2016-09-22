@@ -25,9 +25,9 @@
 
 
 @interface AppSurveyService : NSObject {
-    id <AppSurveyServiceDelegate>delegate;
+    id <AppSurveyServiceDelegate>__weak delegate;
 }
 
-@property (nonatomic, assign) id <AppSurveyServiceDelegate> delegate;
+@property (nonatomic, weak) id <AppSurveyServiceDelegate> delegate;
 
 @end

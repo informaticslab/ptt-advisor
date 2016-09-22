@@ -31,12 +31,12 @@
 }
 
 
-@property(nonatomic, retain) NSString *asText;
-@property(nonatomic, retain) NSString *name;
-@property(nonatomic, retain) NSString *groupName;
-@property(nonatomic, retain) DTFootnotes *footnotes;
+@property(nonatomic, strong) NSString *asText;
+@property(nonatomic, strong) NSString *name;
+@property(nonatomic, strong) NSString *groupName;
+@property(nonatomic, strong) DTFootnotes *footnotes;
 @property NSUInteger number;
-@property(retain, nonatomic) NSMutableDictionary *decisionNodes;
+@property(strong, nonatomic) NSMutableDictionary *decisionNodes;
 
 
 -(id)initWithName:(NSString *)newName groupName:(NSString *)newGroupName number:(NSUInteger)newNumber;

@@ -46,12 +46,6 @@ AppManager *appMgr;
     
 }
 
--(void)dealloc
-{
-    [decisionNodes release];
-    [footnotes release];
-    [super dealloc];
-}
 
 -(void)addFootnote:(NSString *)newFootnote
 {

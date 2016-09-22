@@ -19,11 +19,11 @@
 
 
 @interface HelpVC : UIViewController {
-    id<ModalViewDelegate> delegate;
+    id<ModalViewDelegate> __weak delegate;
    
 }
 
-@property(nonatomic, assign) id<ModalViewDelegate> delegate;
+@property(nonatomic, weak) id<ModalViewDelegate> delegate;
 
 - (IBAction)btnDoneTouchUp:(id)sender;
 

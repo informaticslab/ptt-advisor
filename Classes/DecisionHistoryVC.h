@@ -19,15 +19,15 @@
 
 @interface DecisionHistoryVC : UIViewController <UITableViewDelegate, UITableViewDataSource> {
     IBOutlet UITableView *tvVisitedNodes;
-    id<ModalViewDelegate> delegate;
+    id<ModalViewDelegate> __weak delegate;
     IBOutlet UIImageView *imageView;
 
 }
 
-@property(nonatomic, retain) IBOutlet UITableView *tvVisitedNodes;
-@property(nonatomic, assign) id<ModalViewDelegate> delegate;
+@property(nonatomic, strong) IBOutlet UITableView *tvVisitedNodes;
+@property(nonatomic, weak) id<ModalViewDelegate> delegate;
 - (IBAction)btnDoneTouchUp:(id)sender;
-@property (nonatomic, retain) IBOutlet UIImageView *imageView;
+@property (nonatomic, strong) IBOutlet UIImageView *imageView;
 
 
 @end

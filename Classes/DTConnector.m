@@ -56,12 +56,6 @@
     
 }
 
--(void)dealloc
-{
-    [startNode release];
-    [endNode release];
-    [super dealloc];
-}
 
 
 -(NodeId *)getNextNodeId

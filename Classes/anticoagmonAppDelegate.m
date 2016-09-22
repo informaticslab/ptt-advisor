@@ -58,7 +58,6 @@ AppManager *appMgr;
     
     [self.window makeKeyAndVisible];
     [splashView removeFromSuperview];
-    [splashView release];
     return YES;
 }
 
@@ -103,12 +102,6 @@ AppManager *appMgr;
      */
 }
 
-- (void)dealloc
-{
-    [_window release];
-    [_tabBarController release];
-    [super dealloc];
-}
 
 /*
 // Optional UITabBarControllerDelegate method.

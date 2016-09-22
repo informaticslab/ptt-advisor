@@ -20,14 +20,14 @@
 @interface EulaViewController : UIViewController <UIWebViewDelegate> {
     
     IBOutlet UIWebView *webView;
-    id<ModalViewDelegate> delegate;
+    id<ModalViewDelegate> __weak delegate;
 
 }
 
-@property(nonatomic, assign) id<ModalViewDelegate> delegate;
-@property(nonatomic, retain) UIWebView *webView;
+@property(nonatomic, weak) id<ModalViewDelegate> delegate;
+@property(nonatomic, strong) UIWebView *webView;
 
-@property (retain, nonatomic) IBOutlet UIBarButtonItem *btnAgree;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *btnAgree;
 
 - (IBAction)btnDeclineTouchUp:(id)sender;
 - (IBAction)btnAcceptTouchUp:(id)sender;

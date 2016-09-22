@@ -44,12 +44,6 @@ AppManager *appMgr;
 
 }
 
--(void)dealloc
-{
-    [visitedNodes release];
-    [chosenConnectors release];
-    [super dealloc];
-}
 
 -(void)logVisitedNodeInfo
 {

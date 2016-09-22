@@ -42,9 +42,9 @@
     
 }
 
-@property(nonatomic, retain) UIImageView *imageView;
-@property(nonatomic, retain) UILabel *nodeLabel;
-@property(nonatomic, retain) UILabel *connLabel;
+@property(nonatomic, strong) UIImageView *imageView;
+@property(nonatomic, strong) UILabel *nodeLabel;
+@property(nonatomic, strong) UILabel *connLabel;
 
 -(void)setBackgroundImagesAtIndexPath;
 -(void)setImageForNode;

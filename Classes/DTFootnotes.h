@@ -18,7 +18,7 @@
 
 @interface DTFootnotes : NSObject
 
-@property(nonatomic, retain) NSMutableArray *footnotes;
+@property(nonatomic, strong) NSMutableArray *footnotes;
 
 -(void)addNewFootnode:(NSString *)newFootnode;
 -(NSString *)getFootnoteAtIndex:(NSUInteger)theIndex;

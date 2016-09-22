@@ -43,12 +43,6 @@ AppManager *appMgr;
     
 }
 
-- (void)dealloc
-{
-    [tvVisitedNodes release];
-    [imageView release];
-    [super dealloc];
-}
 
 - (void)didReceiveMemoryWarning
 {
@@ -78,9 +72,7 @@ AppManager *appMgr;
 
 - (void)viewDidUnload
 {
-    [tvVisitedNodes release];
     tvVisitedNodes = nil;
-    [imageView release];
     imageView = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
@@ -135,8 +127,6 @@ AppManager *appMgr;
     }
     
     [customView addSubview:headerLabel];
-    [headerLabel release];
-    [customView autorelease];
     return customView;
     
 }
@@ -184,7 +174,7 @@ AppManager *appMgr;
     
     ReviewCell *cell = (ReviewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) 
-        cell = [[[ReviewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[ReviewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     
     [cell initWithNode:nodeAtRow inTableView:tvVisitedNodes atIndexPath:indexPath];
     

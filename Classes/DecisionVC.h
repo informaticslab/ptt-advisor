@@ -45,16 +45,16 @@
     
 }
 
-@property(nonatomic, retain) UITextView *nodeText;
-@property(nonatomic, retain) UILabel *toolbarText;
-@property(nonatomic, retain) UIImageView *doneImage;
-@property(nonatomic, retain) UIButton *btnAnswer1;
-@property(nonatomic, retain) UIButton *btnAnswer2;
-@property(nonatomic, retain) UIButton *btnDone;
-@property(nonatomic, retain) DTConnector *btn1Connector;
-@property(nonatomic, retain) DTConnector *btn2Connector;
-@property(nonatomic, retain) UIImageView *iconImage;
-@property(nonatomic, retain) IBOutlet UIBarButtonItem *barBtnItemFootnotes;
+@property(nonatomic, strong) UITextView *nodeText;
+@property(nonatomic, strong) UILabel *toolbarText;
+@property(nonatomic, strong) UIImageView *doneImage;
+@property(nonatomic, strong) UIButton *btnAnswer1;
+@property(nonatomic, strong) UIButton *btnAnswer2;
+@property(nonatomic, strong) UIButton *btnDone;
+@property(nonatomic, strong) DTConnector *btn1Connector;
+@property(nonatomic, strong) DTConnector *btn2Connector;
+@property(nonatomic, strong) UIImageView *iconImage;
+@property(nonatomic, strong) IBOutlet UIBarButtonItem *barBtnItemFootnotes;
 
 - (IBAction)btnInfoTouchUp:(id)sender;
 - (IBAction)btnHelpTouchUp:(id)sender;

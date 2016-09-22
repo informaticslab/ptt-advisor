@@ -36,11 +36,6 @@
 
 }
 
--(void)dealloc
-{
-    [decisionPath release];
-    [super dealloc];
-}
 
 
 -(void)nodeVisited:(DTNode *)visitedNode

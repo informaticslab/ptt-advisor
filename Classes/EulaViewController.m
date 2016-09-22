@@ -39,12 +39,6 @@ AppManager *appMgr;
     return self;
 }
 
-- (void)dealloc
-{
-    [webView release];
-    [btnAgree release];
-    [super dealloc];
-}
 
 - (void)didReceiveMemoryWarning
 {
@@ -89,7 +83,6 @@ AppManager *appMgr;
 
 - (void)viewDidUnload
 {
-    [webView release];
     webView = nil;
     [self setBtnAgree:nil];
     [super viewDidUnload];

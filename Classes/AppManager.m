@@ -47,17 +47,6 @@ static AppManager *sharedAppManager = nil;
 	return self;
 }
 
-- (id)retain {
-	return self;
-}
-
-- (unsigned long)retainCount {
-	return UINT_MAX; //denotes an object that cannot be released
-}
-
-- (id)autorelease {
-	return self;
-}
 
 - (id)init {
 	if ((self = [super init])) {
@@ -70,15 +59,6 @@ static AppManager *sharedAppManager = nil;
 	return self;
 }
 
-- (void)dealloc {
-
-	// Should never be called, but just here for clarity really.
-    [dc release];
-    [sharedAppManager release];
-	[appName release];
-	[super dealloc];
-
-}
 
 -(NSString *)debugLabelText
 {

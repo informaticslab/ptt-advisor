@@ -27,9 +27,9 @@
     BOOL agreedWithEula;
 }
 
-@property (nonatomic, retain) NSString *appName;
-@property (nonatomic, retain) UIFont *tableFont;
-@property (nonatomic, retain) DataController *dc;
+@property (nonatomic, strong) NSString *appName;
+@property (nonatomic, strong) UIFont *tableFont;
+@property (nonatomic, strong) DataController *dc;
 @property BOOL agreedWithEula;
 
 + (id)singletonAppManager;

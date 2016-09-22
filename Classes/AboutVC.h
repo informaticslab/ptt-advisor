@@ -22,13 +22,13 @@
 
     IBOutlet UILabel *labelVersionInfo;
     IBOutlet UILabel *labelBuildInfo;
-    id<ModalViewDelegate> delegate;
+    id<ModalViewDelegate> __weak delegate;
 
 }
 
-@property(nonatomic, assign) id<ModalViewDelegate> delegate;
-@property(nonatomic, retain) UILabel *labelVersionInfo;
-@property(nonatomic, retain) UILabel *labelBuildInfo;
+@property(nonatomic, weak) id<ModalViewDelegate> delegate;
+@property(nonatomic, strong) UILabel *labelVersionInfo;
+@property(nonatomic, strong) UILabel *labelBuildInfo;
 
 -(NSString *)getVersionString;
 -(NSString *)getBuildString;

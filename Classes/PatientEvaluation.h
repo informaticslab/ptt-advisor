@@ -25,8 +25,8 @@
     
 }
 
-@property(nonatomic, retain) VisitedDecisionNodes *decisonPath;
-@property(nonatomic, retain) DTNode *currentNode;
+@property(nonatomic, strong) VisitedDecisionNodes *decisonPath;
+@property(nonatomic, strong) DTNode *currentNode;
 
 
 -(void)restart;

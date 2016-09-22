@@ -31,10 +31,10 @@
     
 }
 
-@property(nonatomic, retain) NSMutableArray *visitedNodes;
-@property(nonatomic, retain) NSMutableArray *chosenConnectors;
-@property(nonatomic, retain) DTNode *currNode;
-@property(nonatomic, retain) DTConnector *chosenConnector;
+@property(nonatomic, strong) NSMutableArray *visitedNodes;
+@property(nonatomic, strong) NSMutableArray *chosenConnectors;
+@property(nonatomic, strong) DTNode *currNode;
+@property(nonatomic, strong) DTConnector *chosenConnector;
 
 
 -(void)restart;

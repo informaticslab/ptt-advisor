@@ -24,7 +24,7 @@
     
 }
 
-@property(retain, nonatomic) NSString *asText;
+@property(strong, nonatomic) NSString *asText;
 @property NSUInteger treeNumber;
 @property NSUInteger nodeNumber;
 

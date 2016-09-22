@@ -33,12 +33,6 @@
     
 }
 
--(void)dealloc
-{
-    [trees release];
-    [super dealloc];
-    
-}
 
 -(void)addTree:(DecisionTree *)newTree
 {

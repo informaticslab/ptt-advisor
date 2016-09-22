@@ -25,9 +25,9 @@
     
 }
 
-@property(nonatomic, retain) NodeId *startNode;
-@property(nonatomic, retain) NodeId *endNode;
-@property(nonatomic, retain) NSString *text;
+@property(nonatomic, strong) NodeId *startNode;
+@property(nonatomic, strong) NodeId *endNode;
+@property(nonatomic, strong) NSString *text;
 
 -(id)initWithStartNode:(NodeId *)newStartNode
                endNode:(NodeId *)newEndNode

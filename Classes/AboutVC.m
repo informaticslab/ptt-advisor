@@ -62,9 +62,7 @@
 
 - (void)viewDidUnload
 {
-    [labelVersionInfo release];
     labelVersionInfo = nil;
-    [labelBuildInfo release];
     labelBuildInfo = nil;
     [super viewDidUnload];
 
@@ -110,7 +108,6 @@
 	[self presentModalViewController:eulaVC animated:YES];
     
     // Clean up resources
-    [eulaVC release];
     
 }
 
@@ -128,11 +125,5 @@
 }
      
 
-- (void)dealloc
-{
-    [labelVersionInfo release];
-    [labelBuildInfo release];
-    [super dealloc];
-}
 
 @end

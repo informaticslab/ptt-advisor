@@ -63,14 +63,6 @@ AppManager *appMgr;
     
 }
 
--(void)dealloc
-{
-    myTree = nil;
-    [nodeId release];
-    [footnoteIds release];
-    [super dealloc];
-
-}
 
 // add exit paths
 -(void)addExitConnector:(DTConnector *)newConnector
@@ -91,8 +83,6 @@ AppManager *appMgr;
     
     [self addExitConnector:connector];
     
-    [exitNode release];
-    [connector release];
     
 }
 

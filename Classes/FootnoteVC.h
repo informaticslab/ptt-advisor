@@ -21,17 +21,17 @@
 @interface FootnoteVC : UIViewController
 <UITableViewDelegate, UITableViewDataSource> {
     IBOutlet UITableView *tvFootnotes;
-    id<ModalViewDelegate> delegate;
+    id<ModalViewDelegate> __weak delegate;
     IBOutlet UIImageView *imageView;
     DTNode *currNode;
     
 }
 
-@property(nonatomic, retain) IBOutlet UITableView *tvFootnotes;
-@property(nonatomic, assign) id<ModalViewDelegate> delegate;
+@property(nonatomic, strong) IBOutlet UITableView *tvFootnotes;
+@property(nonatomic, weak) id<ModalViewDelegate> delegate;
 - (IBAction)btnDoneTouchUp:(id)sender;
-@property (nonatomic, retain) IBOutlet UIImageView *imageView;
-@property (nonatomic, retain) DTNode *currNode;
+@property (nonatomic, strong) IBOutlet UIImageView *imageView;
+@property (nonatomic, strong) DTNode *currNode;
 
 -(NSString *)footnoteTextForRow:(NSIndexPath *)indexPath;
 

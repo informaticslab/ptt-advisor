@@ -24,7 +24,7 @@
     
 }
 
-@property(nonatomic, retain) NSMutableDictionary *trees;
+@property(nonatomic, strong) NSMutableDictionary *trees;
 
 
 -(void)addTree:(DecisionTree *)newTree;

@@ -96,12 +96,6 @@ AppManager *appMgr;
     return self;
 }
 
--(void)dealloc
-{
-    [allTrees release];
-    [visitedNodes release];
-    [super dealloc];
-}
 
 // 
 -(PatientEvaluation *)createPatientEncounter
@@ -148,7 +142,7 @@ AppManager *appMgr;
                            number:(NSUInteger)newTreeNumber
 {
     
-    DecisionTree *newTree = [[[DecisionTree alloc] initWithName:newTreeName groupName:newGroupName number:newTreeNumber] autorelease];
+    DecisionTree *newTree = [[DecisionTree alloc] initWithName:newTreeName groupName:newGroupName number:newTreeNumber];
     [self.allTrees addTree:newTree];
     return newTree;
     
@@ -157,7 +151,7 @@ AppManager *appMgr;
 -(DTNode *)loadNodeWithText:(NSString *)bodyText tree:(DecisionTree *)newTree nodeNumber:(NSUInteger)newNodeNumber
 {
     
-    DTNode *newNode = [[[DTNode alloc] initWithBodyText:bodyText tree:newTree nodeNumber:newNodeNumber] autorelease];
+    DTNode *newNode = [[DTNode alloc] initWithBodyText:bodyText tree:newTree nodeNumber:newNodeNumber];
     [self.allTrees addNode:newNode toTree:newTree];
     return newNode;
     
@@ -173,7 +167,7 @@ AppManager *appMgr;
 
 {
     
-    DTNode *newNode = [[[DTNode alloc] initWithBodyText:bodyText tree:aTree nodeNumber:newNodeNumber] autorelease];
+    DTNode *newNode = [[DTNode alloc] initWithBodyText:bodyText tree:aTree nodeNumber:newNodeNumber];
     [newNode addExitConnectorWithText:@"Continue" exitTree:aTreeNumber exitNode:aNodeNumber];
     [self.allTrees addNode:newNode toTree:aTree];
     return newNode;
@@ -190,7 +184,7 @@ AppManager *appMgr;
                     noNodeNumber:(NSUInteger)newNoNodeNumber
 {
     
-    DTNode *newNode = [[[DTNode alloc] initWithBodyText:bodyText tree:newTree nodeNumber:newNodeNumber] autorelease];
+    DTNode *newNode = [[DTNode alloc] initWithBodyText:bodyText tree:newTree nodeNumber:newNodeNumber];
     [newNode addExitConnectorWithText:@"Yes" exitTree:newYesTreeNumber exitNode:newYesNodeNumber];
     [newNode addExitConnectorWithText:@"No" exitTree:newNoTreeNumber exitNode:newNoNodeNumber];
     [self.allTrees addNode:newNode toTree:newTree];

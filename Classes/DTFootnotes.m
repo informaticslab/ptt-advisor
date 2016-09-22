@@ -30,11 +30,6 @@
 
 }
 
--(void)dealloc
-{
-    [footnotes release];
-    [super dealloc];
-}
 
 -(void)addNewFootnode:(NSString *)newFootnode 
 {

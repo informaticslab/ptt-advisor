@@ -43,12 +43,12 @@ typedef enum DecisionNodeTypes {
 
 }
 
-@property(nonatomic, retain) NodeId *nodeId;
-@property(nonatomic, retain) NSString *bodyText;
-@property(nonatomic, retain) NSMutableArray *exitConnectors;
-@property(nonatomic, retain) NSMutableArray *footnoteIds;
+@property(nonatomic, strong) NodeId *nodeId;
+@property(nonatomic, strong) NSString *bodyText;
+@property(nonatomic, strong) NSMutableArray *exitConnectors;
+@property(nonatomic, strong) NSMutableArray *footnoteIds;
 @property DecisionNodeTypes nodeType;
-@property(nonatomic, retain) DecisionTree *myTree;
+@property(nonatomic, strong) DecisionTree *myTree;
 
 -(id)initWithBodyText:(NSString *)newBodyText
            treeNumber:(NSUInteger)theTreeNumber

@@ -34,13 +34,13 @@
 }
 
 
-@property(nonatomic, retain) PatientEvaluation *currPatientEncounter;
-@property(nonatomic, retain) DecisionTrees *allTrees;
-@property(nonatomic, retain) DecisionTree *currDecisionTree;
-@property(nonatomic, retain) DTNode *currDecisionNode;
-@property(nonatomic, retain) DecisionTree *startingTree;
-@property(nonatomic, retain) DTNode *startingNode;
-@property(nonatomic, retain) VisitedDecisionNodes *visitedNodes;
+@property(nonatomic, strong) PatientEvaluation *currPatientEncounter;
+@property(nonatomic, strong) DecisionTrees *allTrees;
+@property(nonatomic, strong) DecisionTree *currDecisionTree;
+@property(nonatomic, strong) DTNode *currDecisionNode;
+@property(nonatomic, strong) DecisionTree *startingTree;
+@property(nonatomic, strong) DTNode *startingNode;
+@property(nonatomic, strong) VisitedDecisionNodes *visitedNodes;
 
 
 -(void)loadDecisionTrees;
