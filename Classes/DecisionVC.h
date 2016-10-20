@@ -18,49 +18,40 @@
 #import "DTConnector.h"
 #import "ModalViewDelegate.h"
 
-@interface DecisionVC : UIViewController <UIAlertViewDelegate,ModalViewDelegate> {
+@interface DecisionVC : UIViewController <UIAlertViewDelegate, ModalViewDelegate>
     
-    IBOutlet UITextView *nodeText;
-    IBOutlet UILabel *toolbarText;
-    IBOutlet UIButton *btnAnswer1;
-    IBOutlet UIButton *btnAnswer2;
-    DTConnector *btn1Connector;
-    DTConnector *btn2Connector;
-    IBOutlet UIImageView *doneImage;
-    IBOutlet UIImageView *iconImage;
-    IBOutlet UIButton *btnDone;
-    IBOutlet UIBarButtonItem *barBtnBack;
-    IBOutlet UIBarButtonItem *barBtnNext;
-    IBOutlet UIBarButtonItem *barBtnBackToLast;
-    IBOutlet UIBarButtonItem *barBtnRestartEval;
-    IBOutlet UIBarButtonItem *barBtnReviewEval;
-    IBOutlet UILabel *lblCurrentPageIndicator;
-    IBOutlet UIBarButtonItem *barBtnItemInfo;
-    IBOutlet UIBarButtonItem *barBtnItemFootnotes;
+    @property(nonatomic, weak) IBOutlet UITextView *nodeText;
+    @property(nonatomic, weak) IBOutlet UILabel *toolbarText;
+    @property(nonatomic, weak) IBOutlet UIButton *btnAnswer1;
+    @property(nonatomic, weak) IBOutlet UIButton *btnAnswer2;
+    @property(nonatomic, weak) IBOutlet UIImageView *doneImage;
+    @property(nonatomic, weak) IBOutlet UIImageView *iconImage;
+    @property(nonatomic, weak) IBOutlet UIButton *btnDone;
+    @property(nonatomic, weak) IBOutlet UIBarButtonItem *barBtnBack;
+    @property(nonatomic, weak) IBOutlet UIBarButtonItem *barBtnNext;
+    @property(nonatomic, weak) IBOutlet UIBarButtonItem *barBtnBackToLast;
+    @property(nonatomic, weak) IBOutlet UIBarButtonItem *barBtnRestartEval;
+    @property(nonatomic, weak) IBOutlet UIBarButtonItem *barBtnReviewEval;
+    @property(nonatomic, weak) IBOutlet UILabel *lblCurrentPageIndicator;
+    @property(nonatomic, weak) IBOutlet UIBarButtonItem *barBtnItemInfo;
+    @property(nonatomic, weak) IBOutlet UIBarButtonItem *barBtnItemFootnotes;
     
-    IBOutlet UILabel *labelBtn1Tree;
-    IBOutlet UILabel *labelBtn1Node;
-    IBOutlet UILabel *labelBtn2Tree;
-    IBOutlet UILabel *labelBtn2Node;
+    @property(nonatomic, weak) IBOutlet UILabel *labelBtn1Tree;
+    @property(nonatomic, weak) IBOutlet UILabel *labelBtn1Node;
+    @property(nonatomic, weak) IBOutlet UILabel *labelBtn2Tree;
+    @property(nonatomic, weak) IBOutlet UILabel *labelBtn2Node;
     
-}
 
-@property(nonatomic, strong) UITextView *nodeText;
-@property(nonatomic, strong) UILabel *toolbarText;
-@property(nonatomic, strong) UIImageView *doneImage;
-@property(nonatomic, strong) UIButton *btnAnswer1;
-@property(nonatomic, strong) UIButton *btnAnswer2;
-@property(nonatomic, strong) UIButton *btnDone;
+
 @property(nonatomic, strong) DTConnector *btn1Connector;
 @property(nonatomic, strong) DTConnector *btn2Connector;
-@property(nonatomic, strong) UIImageView *iconImage;
-@property(nonatomic, strong) IBOutlet UIBarButtonItem *barBtnItemFootnotes;
 
 - (IBAction)btnInfoTouchUp:(id)sender;
 - (IBAction)btnHelpTouchUp:(id)sender;
 - (IBAction)btnFootnotesTouchUp:(id)sender;
 
 -(void)updateNodeUI;
+- (IBAction)btnAnswer1TouchUp:(id)sender;
 - (IBAction)btnAnswer2TouchUp:(id)sender;
 - (IBAction)btnDoneTouchUp:(id)sender;
 - (IBAction)barBtnBackTouchUp:(id)sender;

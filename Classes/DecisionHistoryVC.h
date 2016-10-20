@@ -17,17 +17,9 @@
 #import <UIKit/UIKit.h>
 #import "ModalViewDelegate.h"
 
-@interface DecisionHistoryVC : UIViewController <UITableViewDelegate, UITableViewDataSource> {
-    IBOutlet UITableView *tvVisitedNodes;
-    id<ModalViewDelegate> __weak delegate;
-    IBOutlet UIImageView *imageView;
-
-}
+@interface DecisionHistoryVC : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property(nonatomic, strong) IBOutlet UITableView *tvVisitedNodes;
-@property(nonatomic, weak) id<ModalViewDelegate> delegate;
-- (IBAction)btnDoneTouchUp:(id)sender;
-@property (nonatomic, strong) IBOutlet UIImageView *imageView;
 
 
 @end

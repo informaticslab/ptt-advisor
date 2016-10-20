@@ -28,7 +28,7 @@ static AppManager *sharedAppManager = nil;
 + (id)singletonAppManager {
 	@synchronized(self) {
 		if(sharedAppManager == nil)
-			[[self alloc] init];
+			sharedAppManager = [[self alloc] init];
 	}
 	return sharedAppManager;
 }

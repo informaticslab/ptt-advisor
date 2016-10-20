@@ -21,7 +21,7 @@
 
 @implementation FootnoteVC
 
-@synthesize tvFootnotes, delegate, imageView, currNode;
+@synthesize tvFootnotes, imageView, currNode;
 
 AppManager *appMgr;
 
@@ -50,6 +50,7 @@ AppManager *appMgr;
     
     // Do any additional setup after loading the view from its nib.
     [self.tvFootnotes setBackgroundColor:[UIColor colorWithRed:236.0/255 green:236.0/255 blue:236.0/255 alpha:1]];
+    self.tvFootnotes.delegate = self;
     appMgr = [AppManager singletonAppManager];
     self.currNode = appMgr.dc.visitedNodes.currNode;
 }
@@ -148,7 +149,6 @@ AppManager *appMgr;
 
 - (IBAction)btnDoneTouchUp:(id)sender {
     
-    [delegate didDismissModalView];
     
 }
 

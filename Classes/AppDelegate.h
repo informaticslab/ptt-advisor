@@ -18,7 +18,7 @@
 #import <UIKit/UIKit.h>
 #import "ModalViewDelegate.h"
 
-@interface anticoagmonAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate> {
+@interface AppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate> {
 
 }
 

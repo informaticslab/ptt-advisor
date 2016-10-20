@@ -1,629 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="7.10">
-	<data>
-		<int key="IBDocument.SystemTarget">1280</int>
-		<string key="IBDocument.SystemVersion">11D50</string>
-		<string key="IBDocument.InterfaceBuilderVersion">2177</string>
-		<string key="IBDocument.AppKitVersion">1138.32</string>
-		<string key="IBDocument.HIToolboxVersion">568.00</string>
-		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
-			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-			<string key="NS.object.0">1173</string>
-		</object>
-		<object class="NSArray" key="IBDocument.IntegratedClassDependencies">
-			<bool key="EncodedWithXMLCoder">YES</bool>
-			<string>IBProxyObject</string>
-			<string>IBUIImageView</string>
-			<string>IBUILabel</string>
-			<string>IBUIToolbar</string>
-			<string>IBUIBarButtonItem</string>
-			<string>IBUIButton</string>
-			<string>IBUITextView</string>
-			<string>IBUIView</string>
-		</object>
-		<object class="NSArray" key="IBDocument.PluginDependencies">
-			<bool key="EncodedWithXMLCoder">YES</bool>
-			<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-		</object>
-		<object class="NSMutableDictionary" key="IBDocument.Metadata">
-			<string key="NS.key.0">PluginDependencyRecalculationVersion</string>
-			<integer value="1" key="NS.object.0"/>
-		</object>
-		<object class="NSMutableArray" key="IBDocument.RootObjects" id="1000">
-			<bool key="EncodedWithXMLCoder">YES</bool>
-			<object class="IBProxyObject" id="372490531">
-				<string key="IBProxiedObjectIdentifier">IBFilesOwner</string>
-				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-			</object>
-			<object class="IBProxyObject" id="263589821">
-				<string key="IBProxiedObjectIdentifier">IBFirstResponder</string>
-				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-			</object>
-			<object class="IBUIView" id="935026635">
-				<reference key="NSNextResponder"/>
-				<int key="NSvFlags">274</int>
-				<object class="NSMutableArray" key="NSSubviews">
-					<bool key="EncodedWithXMLCoder">YES</bool>
-					<object class="IBUITextView" id="1064275562">
-						<reference key="NSNextResponder" ref="935026635"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 121}, {280, 84}}</string>
-						<reference key="NSSuperview" ref="935026635"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="703316933"/>
-						<object class="NSColor" key="IBUIBackgroundColor" id="401250361">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MSAxIDEAA</bytes>
-						</object>
-						<bool key="IBUIClipsSubviews">YES</bool>
-						<bool key="IBUIMultipleTouchEnabled">YES</bool>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<bool key="IBUIEditable">NO</bool>
-						<string key="IBUIText">This prototype of PTT Advisor for the iPhone contains a collection of diagnostic algorithms to guide evaluation of patients with prolonged Partial Thromboplastin Time (PTT). </string>
-						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
-							<int key="IBUIAutocapitalizationType">2</int>
-							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						</object>
-						<object class="IBUIFontDescription" key="IBUIFontDescription" id="293639730">
-							<string key="name">Helvetica</string>
-							<string key="family">Helvetica</string>
-							<int key="traits">0</int>
-							<double key="pointSize">12</double>
-						</object>
-						<object class="NSFont" key="IBUIFont" id="824627499">
-							<string key="NSName">Helvetica</string>
-							<double key="NSSize">12</double>
-							<int key="NSfFlags">16</int>
-						</object>
-					</object>
-					<object class="IBUITextView" id="703316933">
-						<reference key="NSNextResponder" ref="935026635"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 201}, {280, 182}}</string>
-						<reference key="NSSuperview" ref="935026635"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="355775062"/>
-						<reference key="IBUIBackgroundColor" ref="401250361"/>
-						<bool key="IBUIClipsSubviews">YES</bool>
-						<bool key="IBUIMultipleTouchEnabled">YES</bool>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<bool key="IBUIEditable">NO</bool>
-						<object class="NSMutableString" key="IBUIText">
-							<bytes key="NS.bytes">QWxnb3JpdGhtIEF1dGhvcnM6Ck1pY2hhZWwgTGFwb3NhdGEsIE1ELCBQaEQKRGVwYXJ0bWVudCBvZiBQ
-YXRob2xvZ3ksIFZhbmRlcmJpbHQgVW5pdmVyc2l0eSBTY2hvb2wgb2YgTWVkaWNpbmUsIE5hc2h2aWxs
-ZSwgVGVubmVzc2VlCk1hcmlzYSBCLiBNYXJxdWVzLCBNRApEZXBhcnRtZW50IG9mIFBhdGhvbG9neSwg
-VW5pdmVyc2l0eSBvZiBBbGFiYW1hIGF0IEJpcm1pbmdoYW0sIEFsYWJhbWEKT3hhbmEgVGNoZXJuaWFu
-dGNob3VrLCBNRApEZXBhcnRtZW50IG9mIFBhdGhvbG9neSwgQ2VkYXJzLVNpbmFpIEhvc3BpdGFsLCBM
-b3MgQW5nZWxlcyBDYWxpZm9ybmlhA</bytes>
-						</object>
-						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
-							<int key="IBUIAutocapitalizationType">2</int>
-							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						</object>
-						<reference key="IBUIFontDescription" ref="293639730"/>
-						<reference key="IBUIFont" ref="824627499"/>
-					</object>
-					<object class="IBUIImageView" id="854011644">
-						<reference key="NSNextResponder" ref="935026635"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 57}, {58, 62}}</string>
-						<reference key="NSSuperview" ref="935026635"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="923740296"/>
-						<bool key="IBUIUserInteractionEnabled">NO</bool>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<object class="NSCustomResource" key="IBUIImage">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">about_icon.png</string>
-						</object>
-					</object>
-					<object class="IBUILabel" id="923740296">
-						<reference key="NSNextResponder" ref="935026635"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{85, 77}, {152, 21}}</string>
-						<reference key="NSSuperview" ref="935026635"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="685168983"/>
-						<bool key="IBUIOpaque">NO</bool>
-						<bool key="IBUIClipsSubviews">YES</bool>
-						<int key="IBUIContentMode">7</int>
-						<bool key="IBUIUserInteractionEnabled">NO</bool>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">About PTT Advisor</string>
-						<object class="NSColor" key="IBUITextColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MCAwLjU2MDQ4Mzg3MSAwAA</bytes>
-						</object>
-						<nil key="IBUIHighlightedColor"/>
-						<int key="IBUIBaselineAdjustment">1</int>
-						<float key="IBUIMinimumFontSize">10</float>
-						<object class="IBUIFontDescription" key="IBUIFontDescription">
-							<string key="name">Helvetica</string>
-							<string key="family">Helvetica</string>
-							<int key="traits">0</int>
-							<double key="pointSize">18</double>
-						</object>
-						<object class="NSFont" key="IBUIFont">
-							<string key="NSName">Helvetica</string>
-							<double key="NSSize">18</double>
-							<int key="NSfFlags">16</int>
-						</object>
-					</object>
-					<object class="IBUILabel" id="685168983">
-						<reference key="NSNextResponder" ref="935026635"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{91, 97}, {138, 21}}</string>
-						<reference key="NSSuperview" ref="935026635"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="1064275562"/>
-						<bool key="IBUIOpaque">NO</bool>
-						<bool key="IBUIClipsSubviews">YES</bool>
-						<int key="IBUIContentMode">7</int>
-						<bool key="IBUIUserInteractionEnabled">NO</bool>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Label</string>
-						<object class="NSColor" key="IBUITextColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MCAwIDAAA</bytes>
-						</object>
-						<nil key="IBUIHighlightedColor"/>
-						<int key="IBUIBaselineAdjustment">1</int>
-						<float key="IBUIMinimumFontSize">10</float>
-						<int key="IBUITextAlignment">1</int>
-						<reference key="IBUIFontDescription" ref="293639730"/>
-						<reference key="IBUIFont" ref="824627499"/>
-					</object>
-					<object class="IBUIToolbar" id="73885350">
-						<reference key="NSNextResponder" ref="935026635"/>
-						<int key="NSvFlags">266</int>
-						<string key="NSFrameSize">{320, 44}</string>
-						<reference key="NSSuperview" ref="935026635"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="854011644"/>
-						<object class="NSColor" key="IBUIBackgroundColor" id="231795113">
-							<int key="NSColorSpace">3</int>
-							<bytes key="NSWhite">MQA</bytes>
-						</object>
-						<bool key="IBUIOpaque">NO</bool>
-						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<int key="IBUIBarStyle">2</int>
-						<object class="NSMutableArray" key="IBUIItems">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBUIBarButtonItem" id="418966457">
-								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-								<float key="IBUIWidth">129</float>
-								<reference key="IBUIToolbar" ref="73885350"/>
-								<int key="IBUISystemItemIdentifier">6</int>
-							</object>
-							<object class="IBUIBarButtonItem" id="499474948">
-								<string key="IBUITitle">Info</string>
-								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-								<reference key="IBUIToolbar" ref="73885350"/>
-							</object>
-							<object class="IBUIBarButtonItem" id="967207468">
-								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-								<float key="IBUIWidth">72</float>
-								<reference key="IBUIToolbar" ref="73885350"/>
-								<int key="IBUISystemItemIdentifier">6</int>
-							</object>
-							<object class="IBUIBarButtonItem" id="1026946837">
-								<string key="IBUITitle">Done</string>
-								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-								<int key="IBUIStyle">1</int>
-								<reference key="IBUIToolbar" ref="73885350"/>
-							</object>
-						</object>
-						<object class="NSColor" key="IBUITintColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC4xNjg2Mjc0NTEgMC41NzY0NzA1ODgyIDAuNjE5NjA3ODQzMQA</bytes>
-						</object>
-					</object>
-					<object class="IBUIButton" id="355775062">
-						<reference key="NSNextResponder" ref="935026635"/>
-						<int key="NSvFlags">-2147483356</int>
-						<string key="NSFrame">{{20, 391}, {127, 37}}</string>
-						<reference key="NSSuperview" ref="935026635"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="559466913"/>
-						<string key="NSReuseIdentifierKey">_NS:222</string>
-						<bool key="IBUIOpaque">NO</bool>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<bool key="IBUIEnabled">NO</bool>
-						<int key="IBUIContentHorizontalAlignment">0</int>
-						<int key="IBUIContentVerticalAlignment">0</int>
-						<int key="IBUIButtonType">1</int>
-						<string key="IBUINormalTitle">Take Survey</string>
-						<reference key="IBUIHighlightedTitleColor" ref="231795113"/>
-						<object class="NSColor" key="IBUINormalTitleColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
-						</object>
-						<object class="NSColor" key="IBUINormalTitleShadowColor" id="1022768128">
-							<int key="NSColorSpace">3</int>
-							<bytes key="NSWhite">MC41AA</bytes>
-						</object>
-						<object class="NSCustomResource" key="IBUIHighlightedBackgroundImage" id="845336104">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">survey_button_down.png</string>
-						</object>
-						<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="78504214">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">survey_button.png</string>
-						</object>
-						<object class="IBUIFontDescription" key="IBUIFontDescription" id="845254823">
-							<string key="name">Helvetica-Bold</string>
-							<string key="family">Helvetica</string>
-							<int key="traits">2</int>
-							<double key="pointSize">15</double>
-						</object>
-						<object class="NSFont" key="IBUIFont" id="405934038">
-							<string key="NSName">Helvetica-Bold</string>
-							<double key="NSSize">15</double>
-							<int key="NSfFlags">16</int>
-						</object>
-					</object>
-					<object class="IBUIButton" id="559466913">
-						<reference key="NSNextResponder" ref="935026635"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{173, 391}, {127, 37}}</string>
-						<reference key="NSSuperview" ref="935026635"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
-						<string key="NSReuseIdentifierKey">_NS:222</string>
-						<bool key="IBUIOpaque">NO</bool>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<int key="IBUIContentHorizontalAlignment">0</int>
-						<int key="IBUIContentVerticalAlignment">0</int>
-						<int key="IBUIButtonType">1</int>
-						<string key="IBUINormalTitle">Read EULA</string>
-						<reference key="IBUIHighlightedTitleColor" ref="231795113"/>
-						<object class="NSColor" key="IBUINormalTitleColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
-						</object>
-						<reference key="IBUINormalTitleShadowColor" ref="1022768128"/>
-						<reference key="IBUIHighlightedBackgroundImage" ref="845336104"/>
-						<reference key="IBUINormalBackgroundImage" ref="78504214"/>
-						<reference key="IBUIFontDescription" ref="845254823"/>
-						<reference key="IBUIFont" ref="405934038"/>
-					</object>
-				</object>
-				<string key="NSFrameSize">{320, 460}</string>
-				<reference key="NSSuperview"/>
-				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView" ref="73885350"/>
-				<object class="NSColor" key="IBUIBackgroundColor">
-					<int key="NSColorSpace">3</int>
-					<bytes key="NSWhite">MQA</bytes>
-					<object class="NSColorSpace" key="NSCustomColorSpace">
-						<int key="NSID">2</int>
-					</object>
-				</object>
-				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-			</object>
-		</object>
-		<object class="IBObjectContainer" key="IBDocument.Objects">
-			<object class="NSMutableArray" key="connectionRecords">
-				<bool key="EncodedWithXMLCoder">YES</bool>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">view</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="935026635"/>
-					</object>
-					<int key="connectionID">21</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">labelVersionInfo</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="685168983"/>
-					</object>
-					<int key="connectionID">33</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">btnDoneTouchUp:</string>
-						<reference key="source" ref="1026946837"/>
-						<reference key="destination" ref="372490531"/>
-					</object>
-					<int key="connectionID">46</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">btnTakeSurveyTouchUp:</string>
-						<reference key="source" ref="355775062"/>
-						<reference key="destination" ref="372490531"/>
-						<int key="IBEventType">7</int>
-					</object>
-					<int key="connectionID">48</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">btnReadEulaTouchUp:</string>
-						<reference key="source" ref="559466913"/>
-						<reference key="destination" ref="372490531"/>
-						<int key="IBEventType">7</int>
-					</object>
-					<int key="connectionID">52</int>
-				</object>
-			</object>
-			<object class="IBMutableOrderedSet" key="objectRecords">
-				<object class="NSArray" key="orderedObjects">
-					<bool key="EncodedWithXMLCoder">YES</bool>
-					<object class="IBObjectRecord">
-						<int key="objectID">0</int>
-						<object class="NSArray" key="object" id="0">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-						</object>
-						<reference key="children" ref="1000"/>
-						<nil key="parent"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">-1</int>
-						<reference key="object" ref="372490531"/>
-						<reference key="parent" ref="0"/>
-						<string key="objectName">File's Owner</string>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">-2</int>
-						<reference key="object" ref="263589821"/>
-						<reference key="parent" ref="0"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">18</int>
-						<reference key="object" ref="935026635"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="1064275562"/>
-							<reference ref="854011644"/>
-							<reference ref="923740296"/>
-							<reference ref="73885350"/>
-							<reference ref="685168983"/>
-							<reference ref="355775062"/>
-							<reference ref="559466913"/>
-							<reference ref="703316933"/>
-						</object>
-						<reference key="parent" ref="0"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">20</int>
-						<reference key="object" ref="1064275562"/>
-						<reference key="parent" ref="935026635"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">26</int>
-						<reference key="object" ref="854011644"/>
-						<reference key="parent" ref="935026635"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">28</int>
-						<reference key="object" ref="923740296"/>
-						<reference key="parent" ref="935026635"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">29</int>
-						<reference key="object" ref="685168983"/>
-						<reference key="parent" ref="935026635"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">40</int>
-						<reference key="object" ref="73885350"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="967207468"/>
-							<reference ref="418966457"/>
-							<reference ref="499474948"/>
-							<reference ref="1026946837"/>
-						</object>
-						<reference key="parent" ref="935026635"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">41</int>
-						<reference key="object" ref="967207468"/>
-						<reference key="parent" ref="73885350"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">42</int>
-						<reference key="object" ref="418966457"/>
-						<reference key="parent" ref="73885350"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">43</int>
-						<reference key="object" ref="1026946837"/>
-						<reference key="parent" ref="73885350"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">45</int>
-						<reference key="object" ref="499474948"/>
-						<reference key="parent" ref="73885350"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">47</int>
-						<reference key="object" ref="355775062"/>
-						<reference key="parent" ref="935026635"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">49</int>
-						<reference key="object" ref="703316933"/>
-						<reference key="parent" ref="935026635"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">50</int>
-						<reference key="object" ref="559466913"/>
-						<reference key="parent" ref="935026635"/>
-					</object>
-				</object>
-			</object>
-			<object class="NSMutableDictionary" key="flattenedProperties">
-				<bool key="EncodedWithXMLCoder">YES</bool>
-				<object class="NSArray" key="dict.sortedKeys">
-					<bool key="EncodedWithXMLCoder">YES</bool>
-					<string>-1.CustomClassName</string>
-					<string>-1.IBPluginDependency</string>
-					<string>-2.CustomClassName</string>
-					<string>-2.IBPluginDependency</string>
-					<string>18.IBPluginDependency</string>
-					<string>20.IBPluginDependency</string>
-					<string>26.IBPluginDependency</string>
-					<string>28.IBPluginDependency</string>
-					<string>29.IBPluginDependency</string>
-					<string>40.IBPluginDependency</string>
-					<string>41.IBPluginDependency</string>
-					<string>42.IBPluginDependency</string>
-					<string>43.IBPluginDependency</string>
-					<string>45.IBPluginDependency</string>
-					<string>47.IBPluginDependency</string>
-					<string>47.IBUIButtonInspectorSelectedStateConfigurationMetadataKey</string>
-					<string>49.IBPluginDependency</string>
-					<string>50.IBPluginDependency</string>
-					<string>50.IBUIButtonInspectorSelectedStateConfigurationMetadataKey</string>
-				</object>
-				<object class="NSArray" key="dict.values">
-					<bool key="EncodedWithXMLCoder">YES</bool>
-					<string>AboutVC</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>UIResponder</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<real value="1"/>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<real value="1"/>
-				</object>
-			</object>
-			<object class="NSMutableDictionary" key="unlocalizedProperties">
-				<bool key="EncodedWithXMLCoder">YES</bool>
-				<reference key="dict.sortedKeys" ref="0"/>
-				<reference key="dict.values" ref="0"/>
-			</object>
-			<nil key="activeLocalization"/>
-			<object class="NSMutableDictionary" key="localizations">
-				<bool key="EncodedWithXMLCoder">YES</bool>
-				<reference key="dict.sortedKeys" ref="0"/>
-				<reference key="dict.values" ref="0"/>
-			</object>
-			<nil key="sourceID"/>
-			<int key="maxID">52</int>
-		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes">
-			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
-				<bool key="EncodedWithXMLCoder">YES</bool>
-				<object class="IBPartialClassDescription">
-					<string key="className">AboutVC</string>
-					<string key="superclassName">UIViewController</string>
-					<object class="NSMutableDictionary" key="actions">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSArray" key="dict.sortedKeys">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>btnDoneTouchUp:</string>
-							<string>btnReadEulaTouchUp:</string>
-							<string>btnTakeSurveyTouchUp:</string>
-						</object>
-						<object class="NSArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>id</string>
-							<string>id</string>
-							<string>id</string>
-						</object>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSArray" key="dict.sortedKeys">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>btnDoneTouchUp:</string>
-							<string>btnReadEulaTouchUp:</string>
-							<string>btnTakeSurveyTouchUp:</string>
-						</object>
-						<object class="NSArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBActionInfo">
-								<string key="name">btnDoneTouchUp:</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBActionInfo">
-								<string key="name">btnReadEulaTouchUp:</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBActionInfo">
-								<string key="name">btnTakeSurveyTouchUp:</string>
-								<string key="candidateClassName">id</string>
-							</object>
-						</object>
-					</object>
-					<object class="NSMutableDictionary" key="outlets">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSArray" key="dict.sortedKeys">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>labelBuildInfo</string>
-							<string>labelVersionInfo</string>
-						</object>
-						<object class="NSArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>UILabel</string>
-							<string>UILabel</string>
-						</object>
-					</object>
-					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSArray" key="dict.sortedKeys">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>labelBuildInfo</string>
-							<string>labelVersionInfo</string>
-						</object>
-						<object class="NSArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBToOneOutletInfo">
-								<string key="name">labelBuildInfo</string>
-								<string key="candidateClassName">UILabel</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">labelVersionInfo</string>
-								<string key="candidateClassName">UILabel</string>
-							</object>
-						</object>
-					</object>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/AboutVC.h</string>
-					</object>
-				</object>
-			</object>
-		</object>
-		<int key="IBDocument.localizationMode">0</int>
-		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
-		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDevelopmentDependencies">
-			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaTouchPlugin.InterfaceBuilder3</string>
-			<integer value="3100" key="NS.object.0"/>
-		</object>
-		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
-		<int key="IBDocument.defaultPropertyAccessControl">3</int>
-		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<bool key="EncodedWithXMLCoder">YES</bool>
-			<object class="NSArray" key="dict.sortedKeys">
-				<bool key="EncodedWithXMLCoder">YES</bool>
-				<string>about_icon.png</string>
-				<string>survey_button.png</string>
-				<string>survey_button_down.png</string>
-			</object>
-			<object class="NSArray" key="dict.values">
-				<bool key="EncodedWithXMLCoder">YES</bool>
-				<string>{58, 62}</string>
-				<string>{127, 37}</string>
-				<string>{127, 37}</string>
-			</object>
-		</object>
-		<string key="IBCocoaTouchPluginVersion">1173</string>
-	</data>
-</archive>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A319" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutVC">
+            <connections>
+                <outlet property="labelVersionInfo" destination="29" id="33"/>
+                <outlet property="view" destination="18" id="21"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="18">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20">
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="84" id="5dU-qf-BAG"/>
+                    </constraints>
+                    <string key="text">This prototype of PTT Advisor for the iPhone contains a collection of diagnostic algorithms to guide evaluation of patients with prolonged Partial Thromboplastin Time (PTT). </string>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <textView multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49">
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="182" id="cOG-X4-CKn"/>
+                    </constraints>
+                    <mutableString key="text">Algorithm Authors:
+Michael Laposata, MD, PhD
+Department of Pathology, Vanderbilt University School of Medicine, Nashville, Tennessee
+Marisa B. Marques, MD
+Department of Pathology, University of Alabama at Birmingham, Alabama
+Oxana Tcherniantchouk, MD
+Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</mutableString>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="about_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="26"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="About PTT Advisor" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="28">
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                    <color key="textColor" red="0.0" green="0.56048387099999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="29">
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="40">
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <items>
+                        <barButtonItem width="129" style="plain" systemItem="fixedSpace" id="42"/>
+                        <barButtonItem title="Info" style="plain" id="45"/>
+                        <barButtonItem width="72" style="plain" systemItem="fixedSpace" id="41"/>
+                        <barButtonItem title="Done" id="43">
+                            <connections>
+                                <action selector="btnDoneTouchUp:" destination="-1" id="46"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                    <color key="tintColor" red="0.16862745100000001" green="0.57647058819999997" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </toolbar>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47">
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                    <state key="normal" title="Take Survey" backgroundImage="survey_button.png">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="survey_button_down.png">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="btnTakeSurveyTouchUp:" destination="-1" eventType="touchUpInside" id="48"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50">
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                    <state key="normal" title="Read EULA" backgroundImage="survey_button.png">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="survey_button_down.png">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="btnReadEulaTouchUp:" destination="-1" eventType="touchUpInside" id="52"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="20" firstAttribute="leading" secondItem="49" secondAttribute="leading" id="1CL-zZ-IES"/>
+                <constraint firstItem="49" firstAttribute="leading" secondItem="47" secondAttribute="leading" id="6qH-Yb-1eI"/>
+                <constraint firstItem="29" firstAttribute="centerX" secondItem="20" secondAttribute="centerX" id="AKX-Ai-7Ai"/>
+                <constraint firstItem="29" firstAttribute="centerX" secondItem="18" secondAttribute="centerX" id="CpI-5x-zhk"/>
+                <constraint firstItem="49" firstAttribute="trailing" secondItem="50" secondAttribute="trailing" id="Doo-c7-qa9"/>
+                <constraint firstItem="29" firstAttribute="leading" secondItem="26" secondAttribute="trailing" constant="13" id="FyJ-f5-lQk"/>
+                <constraint firstItem="47" firstAttribute="baseline" secondItem="50" secondAttribute="baseline" id="GEU-YL-wch"/>
+                <constraint firstAttribute="trailing" secondItem="28" secondAttribute="trailing" constant="83" id="KY5-eT-aEt"/>
+                <constraint firstItem="28" firstAttribute="leading" secondItem="26" secondAttribute="trailing" constant="7" id="MF9-7c-KUO"/>
+                <constraint firstItem="26" firstAttribute="centerY" secondItem="28" secondAttribute="centerY" id="O5A-2I-jny"/>
+                <constraint firstAttribute="trailing" secondItem="29" secondAttribute="trailing" constant="91" id="PsY-zG-9la"/>
+                <constraint firstItem="26" firstAttribute="leading" secondItem="20" secondAttribute="leading" id="Wbu-t8-ByD"/>
+                <constraint firstItem="20" firstAttribute="centerX" secondItem="40" secondAttribute="centerX" id="XC1-LQ-uEW"/>
+                <constraint firstItem="29" firstAttribute="top" secondItem="40" secondAttribute="bottom" constant="53" id="Yos-2E-ig1"/>
+                <constraint firstItem="26" firstAttribute="top" secondItem="40" secondAttribute="bottom" constant="13" id="ZuU-Wb-GFM"/>
+                <constraint firstItem="20" firstAttribute="trailing" secondItem="49" secondAttribute="trailing" id="bFa-iL-W86"/>
+                <constraint firstItem="20" firstAttribute="top" secondItem="29" secondAttribute="bottom" constant="3" id="g0n-Zo-aeW"/>
+                <constraint firstItem="49" firstAttribute="centerX" secondItem="40" secondAttribute="centerX" id="jYi-H3-sXo"/>
+                <constraint firstItem="29" firstAttribute="centerX" secondItem="40" secondAttribute="centerX" id="oTJ-zk-mON"/>
+                <constraint firstItem="40" firstAttribute="leading" secondItem="18" secondAttribute="leading" id="pHx-CB-tFE"/>
+                <constraint firstAttribute="bottom" secondItem="47" secondAttribute="bottom" constant="32" id="qmH-zo-jBy"/>
+                <constraint firstItem="20" firstAttribute="top" secondItem="26" secondAttribute="bottom" constant="2" id="us7-pe-22a"/>
+                <constraint firstItem="29" firstAttribute="centerX" secondItem="40" secondAttribute="centerX" id="wHg-kQ-ud8"/>
+                <constraint firstItem="47" firstAttribute="top" secondItem="49" secondAttribute="bottom" constant="8" symbolic="YES" id="y7m-K4-fBo"/>
+                <constraint firstItem="49" firstAttribute="top" secondItem="26" secondAttribute="bottom" constant="82" id="zQW-hL-Ooq"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="about_icon.png" width="58" height="62"/>
+        <image name="survey_button.png" width="127" height="37"/>
+        <image name="survey_button_down.png" width="127" height="37"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>

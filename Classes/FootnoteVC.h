@@ -18,19 +18,11 @@
 #import "ModalViewDelegate.h"
 #import "DTNode.h"
 
-@interface FootnoteVC : UIViewController
-<UITableViewDelegate, UITableViewDataSource> {
-    IBOutlet UITableView *tvFootnotes;
-    id<ModalViewDelegate> __weak delegate;
-    IBOutlet UIImageView *imageView;
-    DTNode *currNode;
-    
-}
+@interface FootnoteVC : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
-@property(nonatomic, strong) IBOutlet UITableView *tvFootnotes;
-@property(nonatomic, weak) id<ModalViewDelegate> delegate;
+@property(nonatomic, weak) IBOutlet UITableView *tvFootnotes;
 - (IBAction)btnDoneTouchUp:(id)sender;
-@property (nonatomic, strong) IBOutlet UIImageView *imageView;
+@property (nonatomic, weak) IBOutlet UIImageView *imageView;
 @property (nonatomic, strong) DTNode *currNode;
 
 -(NSString *)footnoteTextForRow:(NSIndexPath *)indexPath;

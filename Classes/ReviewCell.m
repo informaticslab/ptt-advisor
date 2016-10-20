@@ -34,8 +34,8 @@ AppManager *appMgr;
         nodeLabel = [[UILabel alloc] initWithFrame:CGRectZero];
         connLabel = [[UILabel alloc] initWithFrame:CGRectZero];
         
-        self.backgroundView = [[UIImageView alloc] init];
-        self.selectedBackgroundView = [[UIImageView alloc] init];
+//        self.backgroundView = [[UIImageView alloc] init];
+//        self.selectedBackgroundView = [[UIImageView alloc] init];
         
         appMgr = [AppManager singletonAppManager];
         
@@ -154,9 +154,9 @@ AppManager *appMgr;
     connLabel.text = connectorText;         
     connLabel.frame = CGRectMake(52, nodeLabel.frame.size.height + 7,CELL_TEXT_LABEL_WIDTH, 20);
        
-    [self setBackgroundImagesAtIndexPath];
+//    [self setBackgroundImagesAtIndexPath];
     
-    [self setImageForNode];
+//    [self setImageForNode];
 
     
     
@@ -167,7 +167,7 @@ AppManager *appMgr;
     
     [super layoutSubviews];
     
-    [self.contentView addSubview:imageView];
+//    [self.contentView addSubview:imageView];
     [self.contentView addSubview:nodeLabel];
     [self.contentView addSubview:connLabel];
     

@@ -39,34 +39,6 @@ VisitedDecisionNodes *visitedNodes;
 @synthesize doneImage, iconImage;
 
 
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self)
-    {
-        // Custom initialization
-        UIButton *btnInfo =  [UIButton buttonWithType:UIButtonTypeCustom];
-        [btnInfo setImage:[UIImage imageNamed:@"orange_i.png"] forState:UIControlStateNormal];
-        [btnInfo setFrame:CGRectMake(0, 0, 32, 32)];
-        
-        //create a UIBarButtonItem with the button as a custom view
-        barBtnItemInfo.customView = btnInfo;
-        barBtnItemInfo.style = UIBarButtonItemStylePlain;
-        
-        
-        UIFont *customFont = [UIFont fontWithName:@"LucidaGrande" size:17];
-        nodeText.font = customFont;
-        
-        appMgr = [AppManager singletonAppManager];
-        
-        
-    }
-    return self;
-}
-
-
 - (IBAction)btnAnswer1TouchUp:(id)sender {
     
     if ([visitedNodes hasDifferentChosenConnectorForCurrentNode:btn1Connector])
@@ -158,6 +130,12 @@ VisitedDecisionNodes *visitedNodes;
     
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleDefault;
+}
+
+
 - (void)didDismissModalView {
     
     // Dismiss the modal view controller
@@ -223,7 +201,7 @@ VisitedDecisionNodes *visitedNodes;
     DecisionHistoryVC *viewController = [[DecisionHistoryVC alloc] initWithNibName:@"DecisionHistoryVC" bundle:nil];
     
     // we are the delegate that is responsible for dismissing the help view
-    viewController.delegate = self;
+//    viewController.delegate = self;
     viewController.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentModalViewController:viewController animated:YES];
     
@@ -249,46 +227,6 @@ VisitedDecisionNodes *visitedNodes;
  }
  */
 
-- (IBAction)btnInfoTouchUp:(id)sender {
-    
-    AboutVC *aboutVC = [[AboutVC alloc] initWithNibName:@"AboutView" bundle:nil];
-    
-    // we are the delegate that is responsible for dismissing the help view
-    aboutVC.delegate = self;
-    aboutVC.modalPresentationStyle = UIModalPresentationFullScreen;
-    [self presentModalViewController:aboutVC animated:YES];
-    
-    // Clean up resources
-    
-}
-
-- (IBAction)btnFootnotesTouchUp:(id)sender {
-    
-    FootnoteVC *footnoteVC = [[FootnoteVC alloc] initWithNibName:@"FootnoteVC" bundle:nil];
-    
-    // we are the delegate that is responsible for dismissing the help view
-    footnoteVC.delegate = self;
-    footnoteVC.modalPresentationStyle = UIModalPresentationFullScreen;
-    [self presentModalViewController:footnoteVC animated:YES];
-    
-    // Clean up resources
-    
-}
-
-
-- (IBAction)btnHelpTouchUp:(id)sender {
-    
-    HelpVC *helpVC = [[HelpVC alloc] initWithNibName:@"HelpVC" bundle:nil];
-    
-    // we are the delegate that is responsible for dismissing the help view
-    helpVC.delegate = self;
-    helpVC.modalPresentationStyle = UIModalPresentationFullScreen;
-    [self presentModalViewController:helpVC animated:YES];
-    
-    // Clean up resources
-    
-    
-}
 
 -(void)updateNodeUI
 {
@@ -312,10 +250,10 @@ VisitedDecisionNodes *visitedNodes;
     [btnAnswer1 setHidden:YES];
     [btnAnswer2 setHidden:YES];
     [btnDone setHidden:YES];
-    labelBtn1Tree.text = nil;
-    labelBtn1Node.text = nil;
-    labelBtn2Tree.text = nil;
-    labelBtn2Node.text = nil;
+    self.labelBtn1Tree.text = nil;
+    self.labelBtn1Node.text = nil;
+    self.labelBtn2Tree.text = nil;
+    self.labelBtn2Node.text = nil;
     
     // set first decision (connector) button
     answerCount = [currNode.exitConnectors count];
@@ -328,11 +266,13 @@ VisitedDecisionNodes *visitedNodes;
         
         [btnAnswer1 setTitle:btn1Connector.text forState:UIControlStateNormal];
         [btnAnswer1 setHidden:NO];
+//        [[btnAnswer1 layer] setBorderWidth:2.0f];
+//        [[btnAnswer1 layer] setBorderColor:[UIColor colorWithRed:0.00 green:0.47 blue:1.00 alpha:1.0].CGColor];
         
         
         if ([appMgr isDebugInfoEnabled]) {
-            labelBtn1Tree.text = [NSString stringWithFormat:@"Tree %lu", (unsigned long)btn1Connector.endNode.treeNumber];
-            labelBtn1Node.text = [NSString stringWithFormat:@"Node %lu", (unsigned long)btn1Connector.endNode.nodeNumber];
+            self.labelBtn1Tree.text = [NSString stringWithFormat:@"Tree %lu", (unsigned long)btn1Connector.endNode.treeNumber];
+            self.labelBtn1Node.text = [NSString stringWithFormat:@"Node %lu", (unsigned long)btn1Connector.endNode.nodeNumber];
         }
         
     }
@@ -347,10 +287,12 @@ VisitedDecisionNodes *visitedNodes;
         
         [btnAnswer2 setTitle:btn2Connector.text forState:UIControlStateNormal];
         [btnAnswer2 setHidden:NO];
+//        [[btnAnswer2 layer] setBorderWidth:1.0f];
+//        [[btnAnswer2 layer] setBorderColor:[UIColor colorWithRed:0.00 green:0.47 blue:1.00 alpha:1.0].CGColor];
         
         if ([appMgr isDebugInfoEnabled]) {
-            labelBtn2Tree.text = [NSString stringWithFormat:@"Tree %lu", (unsigned long)btn2Connector.endNode.treeNumber];
-            labelBtn2Node.text = [NSString stringWithFormat:@"Node %lu", (unsigned long)btn2Connector.endNode.nodeNumber];
+            self.labelBtn2Tree.text = [NSString stringWithFormat:@"Tree %lu", (unsigned long)btn2Connector.endNode.treeNumber];
+            self.labelBtn2Node.text = [NSString stringWithFormat:@"Node %lu", (unsigned long)btn2Connector.endNode.nodeNumber];
         }
     }
     
@@ -386,39 +328,39 @@ VisitedDecisionNodes *visitedNodes;
     if ([appMgr isDebugInfoEnabled]) {
         debugInfo = [NSString stringWithFormat:@"Tree %lu, Node %lu, Footnotes %@",(unsigned long)currNode.nodeId.treeNumber,(unsigned long)currNode.nodeId.nodeNumber, [currNode getFootnoteIdsAsDebugInfo]];
         if (reviewing) {
-            lblCurrentPageIndicator.text = [NSString stringWithFormat:@"Step %lu, %@",[visitedNodes getCurrentNodeIndex] +1, debugInfo];
+            self.lblCurrentPageIndicator.text = [NSString stringWithFormat:@"Step %lu, %@",[visitedNodes getCurrentNodeIndex] +1, debugInfo];
         } else {
-            lblCurrentPageIndicator.text = [NSString stringWithFormat:@"Step %lu, %@",(unsigned long)[visitedNodes getNodeCount], debugInfo];
+            self.lblCurrentPageIndicator.text = [NSString stringWithFormat:@"Step %lu, %@",(unsigned long)[visitedNodes getNodeCount], debugInfo];
         }
     } else {
         if (reviewing)
-            lblCurrentPageIndicator.text = [NSString stringWithFormat:@"Step %lu",[visitedNodes getCurrentNodeIndex] +1];
+            self.lblCurrentPageIndicator.text = [NSString stringWithFormat:@"Step %lu",[visitedNodes getCurrentNodeIndex] +1];
         else
-            lblCurrentPageIndicator.text = [NSString stringWithFormat:@"Step %lu",(unsigned long)[visitedNodes getNodeCount]];
+            self.lblCurrentPageIndicator.text = [NSString stringWithFormat:@"Step %lu",(unsigned long)[visitedNodes getNodeCount]];
     }
     
     // should we enable back button
     if ([visitedNodes hasPreviousNode])
-        barBtnBack.enabled = TRUE;
+        self.barBtnBack.enabled = TRUE;
     else
-        barBtnBack.enabled = FALSE;
+        self.barBtnBack.enabled = FALSE;
     
     // should we enable next button or jump to last?
     if ([visitedNodes hasNextNode]) {
-        barBtnNext.enabled = TRUE;
-        barBtnBackToLast.enabled = TRUE;
+        self.barBtnNext.enabled = TRUE;
+        self.barBtnBackToLast.enabled = TRUE;
     } else {
-        barBtnNext.enabled = FALSE;
-        barBtnBackToLast.enabled = FALSE;
+        self.barBtnNext.enabled = FALSE;
+        self.barBtnBackToLast.enabled = FALSE;
     }
     
     // should we enable next button or jump?
     if ([visitedNodes isAtFirstNode] && [visitedNodes isAtUnansweredNode] ) {
-        barBtnRestartEval.enabled = FALSE;
-        barBtnReviewEval.enabled = FALSE;
+        self.barBtnRestartEval.enabled = FALSE;
+        self.barBtnReviewEval.enabled = FALSE;
     } else {
-        barBtnRestartEval.enabled = TRUE;
-        barBtnReviewEval.enabled = TRUE;
+        self.barBtnRestartEval.enabled = TRUE;
+        self.barBtnReviewEval.enabled = TRUE;
     }
     
     
@@ -466,6 +408,11 @@ VisitedDecisionNodes *visitedNodes;
 {
     
     [super viewDidLoad];
+    [self setNeedsStatusBarAppearanceUpdate];
+    
+    UIFont *customFont = [UIFont fontWithName:@"LucidaGrande" size:17];
+    nodeText.font = customFont;
+    
     appMgr = [AppManager singletonAppManager];
     visitedNodes = appMgr.dc.visitedNodes;
     [self updateNodeUI];
@@ -475,34 +422,15 @@ VisitedDecisionNodes *visitedNodes;
 -(void)viewDidAppear:(BOOL)animated
 {
     
-    if (appMgr.agreedWithEula == FALSE) {
-        [self presentEulaModalView];
-    }
+//    if (appMgr.agreedWithEula == FALSE) {
+//        [self presentEulaModalView];
+//    }
     
 }
 
 
 - (void)viewDidUnload
 {
-    nodeText = nil;
-    btnAnswer1 = nil;
-    btnAnswer2 = nil;
-    toolbarText = nil;
-    doneImage = nil;
-    iconImage = nil;
-    btnDone = nil;
-    barBtnBack = nil;
-    barBtnNext = nil;
-    barBtnBackToLast = nil;
-    barBtnRestartEval = nil;
-    barBtnReviewEval = nil;
-    lblCurrentPageIndicator = nil;
-    barBtnItemInfo = nil;
-    barBtnItemFootnotes = nil;
-    labelBtn1Tree = nil;
-    labelBtn1Node = nil;
-    labelBtn2Tree = nil;
-    labelBtn2Node = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -514,5 +442,10 @@ VisitedDecisionNodes *visitedNodes;
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+-(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue {
+
+    [self dismissViewControllerAnimated:YES completion:nil];
+
+}
 
 @end

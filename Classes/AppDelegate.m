@@ -14,11 +14,11 @@
 //  limitations under the License.
 //
 
-#import "anticoagmonAppDelegate.h"
+#import "AppDelegate.h"
 #import "AppManager.h"
 #import "DecisionVC.h"
 
-@implementation anticoagmonAppDelegate
+@implementation AppDelegate
 
 AppManager *appMgr;
 
@@ -29,22 +29,9 @@ AppManager *appMgr;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    // Add the tab bar controller's current view as a subview of the window
     appMgr = [AppManager singletonAppManager];
+ 
     
-    //self.window.rootViewController = self.tabBarController;
-    
-    UIImageView *splashView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
-    DecisionVC *decisionVC = [[DecisionVC alloc] initWithNibName:@"DecisionView" bundle:nil];
-    //decisionVC.view.frame = [[UIScreen mainScreen] applicationFrame];
-    //[self.window addSubview:decisionVC.view];
-    [self.window setRootViewController:decisionVC];
-    
-    splashView.image = [UIImage imageNamed:@"Default.png"];
-    [_window addSubview:splashView];
-    [_window bringSubviewToFront:splashView];
-    
-
     // Set the application defaults
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSDictionary *appDefaults = [NSDictionary dictionaryWithObject:@"NO" forKey:@"enableDebugInfo"];
@@ -56,8 +43,6 @@ AppManager *appMgr;
     [NSThread sleepForTimeInterval:0.75]; // simulate waiting for server response
 #endif
     
-    [self.window makeKeyAndVisible];
-    [splashView removeFromSuperview];
     return YES;
 }
 
@@ -103,18 +88,5 @@ AppManager *appMgr;
 }
 
 
-/*
-// Optional UITabBarControllerDelegate method.
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
-{
-}
-*/
-
-/*
-// Optional UITabBarControllerDelegate method.
-- (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed
-{
-}
-*/
 
 @end

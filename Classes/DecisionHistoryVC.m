@@ -24,7 +24,7 @@
 
 @implementation DecisionHistoryVC
 
-@synthesize tvVisitedNodes, delegate, imageView;
+@synthesize tvVisitedNodes;
 
 AppManager *appMgr;
 
@@ -65,7 +65,6 @@ AppManager *appMgr;
     //
     tvVisitedNodes.separatorStyle = UITableViewCellSeparatorStyleNone;
     tvVisitedNodes.backgroundColor = [UIColor clearColor];
-    imageView.image = [UIImage imageNamed:@"background.png"];
     
     
 }
@@ -73,7 +72,6 @@ AppManager *appMgr;
 - (void)viewDidUnload
 {
     tvVisitedNodes = nil;
-    imageView = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -110,8 +108,7 @@ AppManager *appMgr;
 	UILabel * headerLabel = [[UILabel alloc] initWithFrame:CGRectZero];
 	headerLabel.backgroundColor = [UIColor clearColor];
 	headerLabel.opaque = NO;
-    headerLabel.textColor = [UIColor whiteColor];
-    headerLabel.shadowColor = [UIColor blackColor];
+    headerLabel.textColor = [UIColor blackColor];
     headerLabel.shadowOffset = CGSizeMake(0, 1);
 	headerLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:20.0f];;
 	headerLabel.frame = CGRectMake(10.0, 0.0, 300.0, HEADER_HEIGHT);
@@ -193,7 +190,6 @@ AppManager *appMgr;
     else
         [appMgr.dc.visitedNodes getUnansweredNode];
     
-    [delegate didDismissModalView];
     
 }
 
@@ -208,7 +204,6 @@ AppManager *appMgr;
     
     
 	DebugLog(@"Evaluation Review Modal View Done button hit");
-	[delegate didDismissModalView];
     
 }
 @end
