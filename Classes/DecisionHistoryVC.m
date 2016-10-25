@@ -190,7 +190,7 @@ AppManager *appMgr;
     else
         [appMgr.dc.visitedNodes getUnansweredNode];
     
-    
+    [self performSegueWithIdentifier:@"unwindToDecisionView" sender:self];
 }
 
 

@@ -484,7 +484,7 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                                     <barButtonItem title="Done" id="HJ3-2d-aEf">
                                         <color key="tintColor" red="0.0" green="0.47450980392156861" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="4vR-9R-OpR" kind="unwind" unwindAction="prepareForUnwind:" id="0gV-Wt-HOO"/>
+                                            <segue destination="4vR-9R-OpR" kind="unwind" identifier="unwindToDecisionView" unwindAction="prepareForUnwind:" id="0gV-Wt-HOO"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>

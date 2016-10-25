@@ -445,6 +445,8 @@ VisitedDecisionNodes *visitedNodes;
 -(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue {
 
     [self dismissViewControllerAnimated:YES completion:nil];
+    [self updateNodeUI];
+
 
 }
 
