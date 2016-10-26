@@ -18,22 +18,13 @@
 #import "ModalViewDelegate.h"
 
 
-@interface AboutVC : UIViewController<ModalViewDelegate> {
+@interface AboutVC : UIViewController<ModalViewDelegate>
 
-    IBOutlet UILabel *labelVersionInfo;
-    IBOutlet UILabel *labelBuildInfo;
-    id<ModalViewDelegate> __weak delegate;
-
-}
-
-@property(nonatomic, weak) id<ModalViewDelegate> delegate;
-@property(nonatomic, strong) UILabel *labelVersionInfo;
-@property(nonatomic, strong) UILabel *labelBuildInfo;
+@property(nonatomic, weak) IBOutlet UILabel *labelVersionInfo;
 
 -(NSString *)getVersionString;
 -(NSString *)getBuildString;
 - (IBAction)btnDoneTouchUp:(id)sender;
-- (IBAction)btnTakeSurveyTouchUp:(id)sender;
 - (IBAction)btnReadEulaTouchUp:(id)sender;
 
 

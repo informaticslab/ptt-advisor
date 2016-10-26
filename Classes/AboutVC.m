@@ -20,7 +20,7 @@
 
 @implementation AboutVC
 
-@synthesize labelVersionInfo, labelBuildInfo, delegate;
+@synthesize labelVersionInfo;
 
 /*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -56,14 +56,16 @@
     self.navigationItem.title = @"Info";
     self.labelVersionInfo.text = [NSString stringWithFormat:@"%@ %@", [self getVersionString], [self getBuildString]];
     
-
+//    self.view.layer.shadowColor = [[UIColor blackColor] CGColor];
+//    self.view.layer.shadowOffset = CGSizeMake(1.0f, 1.0f);
+//    self.view.layer.shadowRadius = 3.0f;
+//    self.view.layer.shadowOpacity = 1.0f;
 }
 
 
 - (void)viewDidUnload
 {
     labelVersionInfo = nil;
-    labelBuildInfo = nil;
     [super viewDidUnload];
 
     // Release any retained subviews of the main view.
@@ -79,20 +81,6 @@
 -(NSString *)getBuildString
 {
     return [NSString stringWithFormat:@"Build %@",[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]];
-}
-
-- (IBAction)btnDoneTouchUp:(id)sender {
-    
-    [delegate didDismissModalView];
-
-}
-
-- (IBAction)btnTakeSurveyTouchUp:(id)sender {
-    
-    DebugLog(@"User hit Take Survey from About View.");
-    NSURL *url = [NSURL URLWithString:@"http://www.surveygizmo.com/s3/620161/PTT-Advisor-Survey-Test"];
-    [[UIApplication sharedApplication] openURL:url];
-    
 }
 
 

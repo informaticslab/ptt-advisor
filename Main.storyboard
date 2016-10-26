@@ -47,18 +47,24 @@
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="UUj-5Q-fWz">
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XNj-Ey-pKk">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="XNj-Ey-pKk">
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="about_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="XGW-Xa-3MQ"/>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="About PTT Advisor" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="GEn-Gv-EFK">
-                                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
-                                                                <color key="textColor" red="0.0" green="0.56048387099999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Eux-9l-WTW">
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="About PTT Advisor" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="GEn-Gv-EFK">
+                                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                                                        <color key="textColor" red="0.0" green="0.56048387099999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZM-wK-cJY">
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
                                                         </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="bottom" secondItem="GEn-Gv-EFK" secondAttribute="bottom" constant="20" symbolic="YES" id="zZC-07-Kzy"/>
-                                                        </constraints>
                                                     </stackView>
                                                     <textView multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sV8-fb-jbp">
                                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -123,6 +129,9 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                             <constraint firstAttribute="trailingMargin" secondItem="J0g-X6-Ol6" secondAttribute="trailing" constant="4" id="zpH-0V-bmf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelVersionInfo" destination="gZM-wK-cJY" id="med-Q6-N9n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TTe-48-byN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -147,14 +156,13 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeR-IZ-BqW" userLabel="btnAnwser1">
-                                <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.59999999999999998" green="0.74901960784313726" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="188" id="5Zc-3V-zus"/>
                                     <constraint firstAttribute="height" constant="43" id="S2h-ED-HYn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
                                 <state key="normal">
-                                    <color key="titleColor" red="0.0" green="0.47450980390000003" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <state key="highlighted" backgroundImage="button_down_shorter.png">
@@ -165,14 +173,13 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mj3-NJ-bf2" userLabel="btnAnswer2">
-                                <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.59999999999999998" green="0.74901960779999999" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="TgD-Mz-29O"/>
                                     <constraint firstAttribute="width" constant="188" id="aXN-dz-JpN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
                                 <state key="normal">
-                                    <color key="titleColor" red="0.0" green="0.47450980390000003" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <state key="highlighted" backgroundImage="button_down_shorter.png">
@@ -189,38 +196,46 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="SvA-Cs-EjL" userLabel="Bottom Toolbar">
                                 <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="0uE-az-Yca"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="0uE-az-Yca">
+                                        <color key="tintColor" red="0.59999999999999998" green="0.74901960779999999" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
                                     <barButtonItem image="back.png" style="plain" id="TAL-LI-YNj" userLabel="barBtnBack">
+                                        <color key="tintColor" red="0.0" green="0.47450980390000003" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="barBtnBackTouchUp:" destination="bKc-iP-Y2K" id="ixU-it-qI9"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="8LQ-MV-TY0"/>
                                     <barButtonItem image="next.png" id="Kg5-uq-6Pq" userLabel="barBtnNext">
+                                        <color key="tintColor" red="0.0" green="0.47450980390000003" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="barBtnNextTouchUp:" destination="bKc-iP-Y2K" id="yb8-QA-z5T"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ysG-BK-VZH"/>
                                     <barButtonItem image="back_to_last.png" id="UaH-0H-IDC" userLabel="barBtnLast">
+                                        <color key="tintColor" red="0.0" green="0.47450980390000003" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="barBtnBackToLastTouchUp:" destination="bKc-iP-Y2K" id="2de-bd-VYC"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="wBq-pM-fco"/>
                                     <barButtonItem image="restart.png" id="vF2-KU-Ehh" userLabel="barBtnRestart">
+                                        <color key="tintColor" red="0.0" green="0.47450980390000003" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="barBtnRestartEvalTouchUp:" destination="bKc-iP-Y2K" id="BDw-F3-Lke"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="gic-ql-z0A"/>
                                     <barButtonItem image="review.png" id="qoH-yi-hn0" userLabel="barBtnReview">
+                                        <color key="tintColor" red="0.0" green="0.47450980390000003" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="uok-xt-Zgh" kind="presentation" id="GYm-hv-swx"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="1pW-1s-Ley"/>
                                 </items>
+                                <color key="barTintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="Z1i-HL-39K" userLabel="Top Toolbar">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
