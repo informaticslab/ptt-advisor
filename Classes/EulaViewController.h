@@ -17,15 +17,9 @@
 #import <UIKit/UIKit.h>
 #import "ModalViewDelegate.h"
 
-@interface EulaViewController : UIViewController <UIWebViewDelegate> {
-    
-    IBOutlet UIWebView *webView;
-    id<ModalViewDelegate> __weak delegate;
+@interface EulaViewController : UIViewController <UIWebViewDelegate>
 
-}
-
-@property(nonatomic, weak) id<ModalViewDelegate> delegate;
-@property(nonatomic, strong) UIWebView *webView;
+@property(nonatomic, weak) IBOutlet UIWebView *webView;
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *btnAgree;
 

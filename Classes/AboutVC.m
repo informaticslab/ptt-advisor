@@ -56,10 +56,6 @@
     self.navigationItem.title = @"Info";
     self.labelVersionInfo.text = [NSString stringWithFormat:@"%@ %@", [self getVersionString], [self getBuildString]];
     
-//    self.view.layer.shadowColor = [[UIColor blackColor] CGColor];
-//    self.view.layer.shadowOffset = CGSizeMake(1.0f, 1.0f);
-//    self.view.layer.shadowRadius = 3.0f;
-//    self.view.layer.shadowOpacity = 1.0f;
 }
 
 
@@ -83,35 +79,13 @@
     return [NSString stringWithFormat:@"Build %@",[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]];
 }
 
-
-- (void)presentEulaModalView
-{
-    
-    // Create the modal view controller
-    EulaViewController *eulaVC = [[EulaViewController alloc] initWithNibName:@"EulaViewController" bundle:nil];
-    
-    // we are the delegate that is responsible for dismissing the help view
-	eulaVC.delegate = self;
-	eulaVC.modalPresentationStyle = UIModalPresentationPageSheet;
-	[self presentModalViewController:eulaVC animated:YES];
-    
-    // Clean up resources
-    
-}
-
-- (void)didDismissModalView {
-    
-    // Dismiss the modal view controller
-    [self dismissViewControllerAnimated:YES completion:nil];
-    
-}
-
-
-- (IBAction)btnReadEulaTouchUp:(id)sender {
-    
-    [self presentEulaModalView];
-}
      
+-(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue {
+    
+   // [self dismissViewControllerAnimated:YES completion:nil];
+    
+    
+}
 
 
 @end

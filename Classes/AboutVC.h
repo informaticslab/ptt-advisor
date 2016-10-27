@@ -18,14 +18,12 @@
 #import "ModalViewDelegate.h"
 
 
-@interface AboutVC : UIViewController<ModalViewDelegate>
+@interface AboutVC : UIViewController
 
 @property(nonatomic, weak) IBOutlet UILabel *labelVersionInfo;
 
 -(NSString *)getVersionString;
 -(NSString *)getBuildString;
-- (IBAction)btnDoneTouchUp:(id)sender;
-- (IBAction)btnReadEulaTouchUp:(id)sender;
 
 
 @end

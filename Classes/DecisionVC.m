@@ -393,7 +393,6 @@ VisitedDecisionNodes *visitedNodes;
         EulaViewController *eulaVC = [[EulaViewController alloc] initWithNibName:@"EulaViewController" bundle:nil];
         
         // we are the delegate that is responsible for dismissing the help view
-        eulaVC.delegate = self;
         eulaVC.modalPresentationStyle = UIModalPresentationPageSheet;
         [self presentModalViewController:eulaVC animated:YES];
         

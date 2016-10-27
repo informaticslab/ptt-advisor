@@ -48,7 +48,6 @@
 
 - (IBAction)btnInfoTouchUp:(id)sender;
 - (IBAction)btnHelpTouchUp:(id)sender;
-- (IBAction)btnFootnotesTouchUp:(id)sender;
 
 -(void)updateNodeUI;
 - (IBAction)btnAnswer1TouchUp:(id)sender;

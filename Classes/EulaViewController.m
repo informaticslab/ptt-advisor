@@ -20,7 +20,7 @@
 @implementation EulaViewController
 @synthesize btnAgree;
 
-@synthesize delegate, webView;
+@synthesize webView;
 
 AppManager *appMgr;
 
@@ -29,11 +29,7 @@ AppManager *appMgr;
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         
-        appMgr = [AppManager singletonAppManager];
         
-        // Custom initialization
-        webView = [[UIWebView alloc] init];
-        webView.backgroundColor = [UIColor whiteColor]; 
 
     }
     return self;
@@ -54,15 +50,19 @@ AppManager *appMgr;
 {
     
     [super viewDidLoad];
+    appMgr = [AppManager singletonAppManager];
+
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"neweula" 
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"neweula"
                                                      ofType:@"html"];    
     
     NSString *html = [NSString stringWithContentsOfFile:path
                                                   encoding:NSUTF8StringEncoding
                                                      error:NULL];
     
-    [self.webView loadHTMLString:html baseURL:nil];
+    // Custom initialization
+    webView.backgroundColor = [UIColor whiteColor];
+   [self.webView loadHTMLString:html baseURL:nil];
     self.webView.delegate = self;
     
     if (appMgr.agreedWithEula == TRUE) {
@@ -81,14 +81,6 @@ AppManager *appMgr;
     return YES;
 }
 
-- (void)viewDidUnload
-{
-    webView = nil;
-    [self setBtnAgree:nil];
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
@@ -99,7 +91,6 @@ AppManager *appMgr;
 - (IBAction)btnDeclineTouchUp:(id)sender 
 {
     appMgr.agreedWithEula = FALSE;
-	[delegate didDismissModalView];
 
 }
 
@@ -107,7 +98,6 @@ AppManager *appMgr;
 {
 
     appMgr.agreedWithEula = TRUE;
-	[delegate didDismissModalView];
 
 }
 

@@ -99,17 +99,21 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARr-qo-N3E">
-                                <frame key="frameInset" minX="101" minY="475" width="172" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.22788452840000001" green="0.48761648330000001" blue="0.88917589900000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pDe-ME-rba">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARr-qo-N3E">
+                                <color key="backgroundColor" red="0.59999999999999998" green="0.74901960779999999" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="U3G-H2-9bv"/>
+                                </constraints>
+                                <state key="normal" title="Read EULA"/>
+                                <connections>
+                                    <segue destination="Fqm-QC-zbY" kind="presentation" identifier="present" id="4am-SR-7TI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -119,13 +123,13 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                             <constraint firstItem="J0g-X6-Ol6" firstAttribute="leading" secondItem="xbl-Ip-nAg" secondAttribute="leadingMargin" constant="4" id="Mn5-HD-I6G"/>
                             <constraint firstItem="J0g-X6-Ol6" firstAttribute="top" secondItem="QVn-K6-BWy" secondAttribute="bottom" constant="23" id="N1F-71-qim"/>
                             <constraint firstItem="QVn-K6-BWy" firstAttribute="top" secondItem="gcj-8H-rWP" secondAttribute="bottom" constant="8" id="P2I-0W-Vvo"/>
+                            <constraint firstItem="ARr-qo-N3E" firstAttribute="top" secondItem="RyF-ly-pkL" secondAttribute="bottom" constant="55" id="Par-SS-RPD"/>
                             <constraint firstItem="pDe-ME-rba" firstAttribute="centerX" secondItem="xbl-Ip-nAg" secondAttribute="centerX" id="PxH-x4-20h"/>
                             <constraint firstItem="pDe-ME-rba" firstAttribute="top" secondItem="QVn-K6-BWy" secondAttribute="bottom" constant="-32" id="RlE-1K-7qN"/>
-                            <constraint firstItem="PMO-wM-6Z9" firstAttribute="top" secondItem="VPB-Sn-6M5" secondAttribute="bottom" constant="94" id="TFa-gP-5IJ"/>
+                            <constraint firstItem="PMO-wM-6Z9" firstAttribute="top" secondItem="VPB-Sn-6M5" secondAttribute="bottom" constant="80" id="TFa-gP-5IJ"/>
                             <constraint firstItem="pDe-ME-rba" firstAttribute="top" secondItem="gcj-8H-rWP" secondAttribute="bottom" constant="20" id="b2R-7W-MVH"/>
                             <constraint firstItem="QVn-K6-BWy" firstAttribute="leading" secondItem="xbl-Ip-nAg" secondAttribute="leading" id="dQ7-q8-OrZ"/>
-                            <constraint firstItem="VPB-Sn-6M5" firstAttribute="centerX" secondItem="xbl-Ip-nAg" secondAttribute="centerX" id="eSs-qC-Ehv"/>
-                            <constraint firstItem="VPB-Sn-6M5" firstAttribute="leading" secondItem="xbl-Ip-nAg" secondAttribute="leadingMargin" constant="108" id="seE-ml-XJo"/>
+                            <constraint firstItem="ARr-qo-N3E" firstAttribute="centerX" secondItem="xbl-Ip-nAg" secondAttribute="centerX" id="uqp-h0-2s5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="J0g-X6-Ol6" secondAttribute="trailing" constant="4" id="zpH-0V-bmf"/>
                         </constraints>
                     </view>
@@ -134,6 +138,7 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TTe-48-byN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="mR8-zD-QqW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-18.399999999999999" y="674.21289355322347"/>
         </scene>
@@ -242,7 +247,7 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                                 <items>
                                     <barButtonItem title="Item" style="plain" id="HyK-6Q-QAP">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="zwi-sZ-8dq" userLabel="Info Button">
-                                            <rect key="frame" x="16" y="6" width="32" height="32"/>
+                                            <rect key="frame" x="16" y="484" width="32" height="32"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -597,7 +602,11 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                                 <items>
                                     <barButtonItem enabled="NO" width="80" style="plain" id="xAe-9X-2Z8"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Oh3-rY-lxp"/>
-                                    <barButtonItem title="I Agree" width="80" id="633-0m-okf"/>
+                                    <barButtonItem title="I Agree" width="80" id="633-0m-okf">
+                                        <connections>
+                                            <segue destination="mR8-zD-QqW" kind="unwind" unwindAction="prepareForUnwind:" id="CA4-mG-Ig6"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="al6-Z6-LQB">
@@ -630,10 +639,13 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                             <constraint firstAttribute="trailing" secondItem="al6-Z6-LQB" secondAttribute="trailing" id="uJf-ms-GHJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="al6-Z6-LQB" id="suL-49-Yq2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OwQ-sd-Gkc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2543.1999999999998" y="-78.710644677661179"/>
+            <point key="canvasLocation" x="791" y="674"/>
         </scene>
     </scenes>
     <resources>
