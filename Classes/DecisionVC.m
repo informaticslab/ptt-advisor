@@ -266,8 +266,6 @@ VisitedDecisionNodes *visitedNodes;
         
         [btnAnswer1 setTitle:btn1Connector.text forState:UIControlStateNormal];
         [btnAnswer1 setHidden:NO];
-//        [[btnAnswer1 layer] setBorderWidth:2.0f];
-//        [[btnAnswer1 layer] setBorderColor:[UIColor colorWithRed:0.00 green:0.47 blue:1.00 alpha:1.0].CGColor];
         
         
         if ([appMgr isDebugInfoEnabled]) {
@@ -287,8 +285,6 @@ VisitedDecisionNodes *visitedNodes;
         
         [btnAnswer2 setTitle:btn2Connector.text forState:UIControlStateNormal];
         [btnAnswer2 setHidden:NO];
-//        [[btnAnswer2 layer] setBorderWidth:1.0f];
-//        [[btnAnswer2 layer] setBorderColor:[UIColor colorWithRed:0.00 green:0.47 blue:1.00 alpha:1.0].CGColor];
         
         if ([appMgr isDebugInfoEnabled]) {
             self.labelBtn2Tree.text = [NSString stringWithFormat:@"Tree %lu", (unsigned long)btn2Connector.endNode.treeNumber];

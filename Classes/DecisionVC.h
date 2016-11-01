@@ -46,8 +46,6 @@
 @property(nonatomic, strong) DTConnector *btn1Connector;
 @property(nonatomic, strong) DTConnector *btn2Connector;
 
-- (IBAction)btnInfoTouchUp:(id)sender;
-- (IBAction)btnHelpTouchUp:(id)sender;
 
 -(void)updateNodeUI;
 - (IBAction)btnAnswer1TouchUp:(id)sender;

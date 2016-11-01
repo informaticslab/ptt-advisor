@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bKc-iP-Y2K">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bKc-iP-Y2K">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,6 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QVn-K6-BWy">
+                                <rect key="frame" x="0.0" y="20" width="375" height="52"/>
                                 <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <barButtonItem width="129" style="plain" systemItem="fixedSpace" id="G4h-ae-5r5"/>
@@ -33,6 +37,7 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPB-Sn-6M5">
+                                <rect key="frame" x="169" y="557" width="82" height="30"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                 <state key="normal" title="Read EULA">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -42,22 +47,31 @@
                                 </state>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="J0g-X6-Ol6">
+                                <rect key="frame" x="20" y="95" width="335" height="328"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dG8-3o-bsY">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="328"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="UUj-5Q-fWz">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="146"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="XNj-Ey-pKk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="222" height="62"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="about_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="XGW-Xa-3MQ"/>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="about_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="XGW-Xa-3MQ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="58" height="62"/>
+                                                            </imageView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Eux-9l-WTW">
+                                                                <rect key="frame" x="72" y="11" width="150" height="40"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="About PTT Advisor" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="GEn-Gv-EFK">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="21"/>
                                                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                                                         <color key="textColor" red="0.0" green="0.56048387099999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZM-wK-cJY">
+                                                                        <rect key="frame" x="0.0" y="23" width="150" height="17"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -67,6 +81,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <textView multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sV8-fb-jbp">
+                                                        <rect key="frame" x="0.0" y="62" width="335" height="84"/>
                                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="84" id="LWh-4Z-b26"/>
@@ -81,6 +96,7 @@
                                                 </constraints>
                                             </stackView>
                                             <textView multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RyF-ly-pkL">
+                                                <rect key="frame" x="0.0" y="146" width="335" height="182"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="182" id="nc5-O1-uSt"/>
@@ -100,11 +116,13 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pDe-ME-rba">
+                                <rect key="frame" x="173" y="40" width="29" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARr-qo-N3E">
+                                <rect key="frame" x="122.5" y="478" width="130" height="30"/>
                                 <color key="backgroundColor" red="0.59999999999999998" green="0.74901960779999999" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="U3G-H2-9bv"/>
@@ -114,18 +132,28 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                                     <segue destination="Fqm-QC-zbY" kind="presentation" identifier="present" id="4am-SR-7TI"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8K8-Dd-2dM">
+                                <rect key="frame" x="0.0" y="72" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="fbY-uC-MXN"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="QVn-K6-BWy" firstAttribute="leading" secondItem="xbl-Ip-nAg" secondAttribute="leading" id="5V6-Qi-9kZ"/>
+                            <constraint firstItem="8K8-Dd-2dM" firstAttribute="leading" secondItem="xbl-Ip-nAg" secondAttribute="leading" id="BAy-b6-7gl"/>
                             <constraint firstAttribute="trailing" secondItem="QVn-K6-BWy" secondAttribute="trailing" id="E91-wU-Uq8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VPB-Sn-6M5" secondAttribute="trailing" constant="108" id="FJ0-bf-Djg"/>
                             <constraint firstItem="J0g-X6-Ol6" firstAttribute="leading" secondItem="xbl-Ip-nAg" secondAttribute="leadingMargin" constant="4" id="Mn5-HD-I6G"/>
                             <constraint firstItem="J0g-X6-Ol6" firstAttribute="top" secondItem="QVn-K6-BWy" secondAttribute="bottom" constant="23" id="N1F-71-qim"/>
-                            <constraint firstItem="QVn-K6-BWy" firstAttribute="top" secondItem="gcj-8H-rWP" secondAttribute="bottom" constant="8" id="P2I-0W-Vvo"/>
+                            <constraint firstItem="QVn-K6-BWy" firstAttribute="top" secondItem="gcj-8H-rWP" secondAttribute="bottom" id="P2I-0W-Vvo"/>
                             <constraint firstItem="ARr-qo-N3E" firstAttribute="top" secondItem="RyF-ly-pkL" secondAttribute="bottom" constant="55" id="Par-SS-RPD"/>
                             <constraint firstItem="pDe-ME-rba" firstAttribute="centerX" secondItem="xbl-Ip-nAg" secondAttribute="centerX" id="PxH-x4-20h"/>
+                            <constraint firstItem="8K8-Dd-2dM" firstAttribute="top" secondItem="QVn-K6-BWy" secondAttribute="bottom" id="QnA-aa-CCw"/>
                             <constraint firstItem="pDe-ME-rba" firstAttribute="top" secondItem="QVn-K6-BWy" secondAttribute="bottom" constant="-32" id="RlE-1K-7qN"/>
+                            <constraint firstAttribute="trailing" secondItem="8K8-Dd-2dM" secondAttribute="trailing" id="RzQ-oY-OSY"/>
                             <constraint firstItem="PMO-wM-6Z9" firstAttribute="top" secondItem="VPB-Sn-6M5" secondAttribute="bottom" constant="80" id="TFa-gP-5IJ"/>
                             <constraint firstItem="pDe-ME-rba" firstAttribute="top" secondItem="gcj-8H-rWP" secondAttribute="bottom" constant="20" id="b2R-7W-MVH"/>
                             <constraint firstItem="QVn-K6-BWy" firstAttribute="leading" secondItem="xbl-Ip-nAg" secondAttribute="leading" id="dQ7-q8-OrZ"/>
@@ -155,12 +183,14 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUv-WG-fd0" userLabel="tvQuestion">
+                                <rect key="frame" x="16" y="155" width="343" height="377"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Perform assays for factors IX, XI, and XII to assess their contribution to the prolonged PTT; consider platelet-related causes for the bleeding in the presence of a PTT-related factor deficiency(8,9,18,19).</string>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeR-IZ-BqW" userLabel="btnAnwser1">
+                                <rect key="frame" x="93.5" y="493" width="188" height="43"/>
                                 <color key="backgroundColor" red="0.59999999999999998" green="0.74901960784313726" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="188" id="5Zc-3V-zus"/>
@@ -178,6 +208,7 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mj3-NJ-bf2" userLabel="btnAnswer2">
+                                <rect key="frame" x="93.5" y="545" width="188" height="43"/>
                                 <color key="backgroundColor" red="0.59999999999999998" green="0.74901960779999999" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="TgD-Mz-29O"/>
@@ -195,11 +226,13 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="left" image="eval_guide_header.png" translatesAutoresizingMaskIntoConstraints="NO" id="WTD-bI-aw9">
+                                <rect key="frame" x="16" y="77" width="343" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="xkl-gq-0ei"/>
                                 </constraints>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="SvA-Cs-EjL" userLabel="Bottom Toolbar">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="0uE-az-Yca">
                                         <color key="tintColor" red="0.59999999999999998" green="0.74901960779999999" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -243,11 +276,12 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                                 <color key="barTintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="Z1i-HL-39K" userLabel="Top Toolbar">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <barButtonItem title="Item" style="plain" id="HyK-6Q-QAP">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="zwi-sZ-8dq" userLabel="Info Button">
-                                            <rect key="frame" x="16" y="484" width="32" height="32"/>
+                                            <rect key="frame" x="16" y="6" width="32" height="32"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -299,6 +333,7 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                                 <color key="barTintColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="QGZ-kI-7vJ">
+                                <rect key="frame" x="175.5" y="596" width="24.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Zgr-mo-bxP"/>
                                 </constraints>
@@ -307,6 +342,7 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="W23-fZ-vI0">
+                                <rect key="frame" x="289.5" y="507" width="69.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="N12-oL-fgv"/>
                                 </constraints>
@@ -315,6 +351,7 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="jgZ-sl-jfp">
+                                <rect key="frame" x="289.5" y="521" width="24.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="2YL-Ee-YyM"/>
                                 </constraints>
@@ -323,16 +360,19 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="d4R-wK-zYN">
+                                <rect key="frame" x="289.5" y="558" width="24.5" height="11.5"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="10"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="aD1-AD-lWC">
+                                <rect key="frame" x="289.5" y="571.5" width="24.5" height="11.5"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="10"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5VJ-Sn-yf1" userLabel="btnDone">
+                                <rect key="frame" x="151.5" y="492" width="72" height="98"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="98" id="633-dB-SgO"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="72" id="7Bd-Lq-rri"/>
@@ -348,10 +388,18 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v5m-2P-MVM">
+                                <rect key="frame" x="0.0" y="64" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="HGA-Aa-V3h"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="WTD-bI-aw9" firstAttribute="top" secondItem="Z1i-HL-39K" secondAttribute="bottom" constant="13" id="1BY-sM-oFd"/>
+                            <constraint firstAttribute="trailing" secondItem="v5m-2P-MVM" secondAttribute="trailing" id="7Lc-gP-bJ4"/>
                             <constraint firstItem="WTD-bI-aw9" firstAttribute="leading" secondItem="4Y1-RU-eEC" secondAttribute="leadingMargin" id="7VP-7V-8GI"/>
                             <constraint firstAttribute="leadingMargin" secondItem="lUv-WG-fd0" secondAttribute="leading" id="8mR-gS-yiq"/>
                             <constraint firstItem="mj3-NJ-bf2" firstAttribute="centerX" secondItem="QGZ-kI-7vJ" secondAttribute="centerX" id="9kf-or-1py"/>
@@ -365,7 +413,8 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                             <constraint firstAttribute="trailingMargin" secondItem="lUv-WG-fd0" secondAttribute="trailing" id="LJ1-W2-Way"/>
                             <constraint firstItem="5VJ-Sn-yf1" firstAttribute="centerX" secondItem="4Y1-RU-eEC" secondAttribute="centerX" id="Lnw-4V-XDT"/>
                             <constraint firstItem="lTm-Ua-3JI" firstAttribute="top" secondItem="SvA-Cs-EjL" secondAttribute="bottom" id="ONp-Ig-XMC"/>
-                            <constraint firstItem="Z1i-HL-39K" firstAttribute="top" secondItem="sKU-jd-OPk" secondAttribute="bottom" constant="8" id="UIA-VK-SIc"/>
+                            <constraint firstItem="v5m-2P-MVM" firstAttribute="leading" secondItem="4Y1-RU-eEC" secondAttribute="leading" id="T0o-9G-ZFg"/>
+                            <constraint firstItem="Z1i-HL-39K" firstAttribute="top" secondItem="sKU-jd-OPk" secondAttribute="bottom" id="UIA-VK-SIc"/>
                             <constraint firstItem="mj3-NJ-bf2" firstAttribute="top" secondItem="lUv-WG-fd0" secondAttribute="bottom" constant="13" id="US2-1c-Xm0"/>
                             <constraint firstItem="WTD-bI-aw9" firstAttribute="leading" secondItem="lUv-WG-fd0" secondAttribute="leading" id="VjU-nB-imc"/>
                             <constraint firstItem="WTD-bI-aw9" firstAttribute="trailing" secondItem="W23-fZ-vI0" secondAttribute="trailing" id="VvF-XA-DDA"/>
@@ -374,6 +423,7 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                             <constraint firstItem="jgZ-sl-jfp" firstAttribute="leading" secondItem="TeR-IZ-BqW" secondAttribute="trailing" constant="8" id="axu-Gr-b6r"/>
                             <constraint firstItem="Z1i-HL-39K" firstAttribute="centerX" secondItem="WTD-bI-aw9" secondAttribute="centerX" id="cl0-VK-WGv"/>
                             <constraint firstItem="Z1i-HL-39K" firstAttribute="leading" secondItem="4Y1-RU-eEC" secondAttribute="leading" id="diY-i3-pOl"/>
+                            <constraint firstItem="v5m-2P-MVM" firstAttribute="top" secondItem="Z1i-HL-39K" secondAttribute="bottom" id="hou-S7-R3e"/>
                             <constraint firstItem="mj3-NJ-bf2" firstAttribute="centerX" secondItem="4Y1-RU-eEC" secondAttribute="centerX" id="j1O-i7-9qf"/>
                             <constraint firstItem="aD1-AD-lWC" firstAttribute="leading" secondItem="mj3-NJ-bf2" secondAttribute="trailing" constant="8" id="jcL-Ie-tX2"/>
                             <constraint firstItem="SvA-Cs-EjL" firstAttribute="leading" secondItem="4Y1-RU-eEC" secondAttribute="leading" id="kaN-33-O6P"/>
@@ -407,7 +457,7 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NRa-Nt-uMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="4vR-9R-OpR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-18" y="-106"/>
+            <point key="canvasLocation" x="-18.399999999999999" y="-106.59670164917542"/>
         </scene>
         <!--FootnoteVC-->
         <scene sceneID="X5Y-zx-BgN">
@@ -422,6 +472,7 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WWB-6B-gnV">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="R1g-MX-dM7"/>
@@ -435,8 +486,11 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                                 </items>
                                 <color key="tintColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="footnotes_header.png" translatesAutoresizingMaskIntoConstraints="NO" id="tmx-iG-lq4"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="footnotes_header.png" translatesAutoresizingMaskIntoConstraints="NO" id="tmx-iG-lq4">
+                                <rect key="frame" x="0.0" y="65" width="375" height="67"/>
+                            </imageView>
                             <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="T2E-uV-cxo">
+                                <rect key="frame" x="16" y="139" width="343" height="508"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="wdS-px-9UB" id="D3K-dV-ymg"/>
@@ -444,27 +498,38 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Footnotes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bY8-8K-g83">
+                                <rect key="frame" x="149" y="32" width="78" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uvz-NH-WUU">
+                                <rect key="frame" x="0.0" y="64" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="oFT-A6-XBN"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="WWB-6B-gnV" firstAttribute="top" secondItem="6rz-qJ-Rac" secondAttribute="bottom" constant="8" id="8Ou-KA-rgb"/>
-                            <constraint firstItem="bY8-8K-g83" firstAttribute="top" secondItem="6rz-qJ-Rac" secondAttribute="bottom" constant="23" id="8r4-M7-qlz"/>
+                            <constraint firstItem="uvz-NH-WUU" firstAttribute="leading" secondItem="cqS-cN-jLV" secondAttribute="leading" id="4Rr-VP-g5h"/>
+                            <constraint firstItem="WWB-6B-gnV" firstAttribute="top" secondItem="6rz-qJ-Rac" secondAttribute="bottom" id="8Ou-KA-rgb"/>
+                            <constraint firstItem="bY8-8K-g83" firstAttribute="top" secondItem="6rz-qJ-Rac" secondAttribute="bottom" constant="12" id="8r4-M7-qlz"/>
                             <constraint firstItem="tmx-iG-lq4" firstAttribute="leading" secondItem="cqS-cN-jLV" secondAttribute="leading" id="CD1-wg-KnF"/>
                             <constraint firstItem="E3Z-Rk-2Lh" firstAttribute="top" secondItem="T2E-uV-cxo" secondAttribute="bottom" constant="20" id="EOm-nV-Igq"/>
-                            <constraint firstItem="T2E-uV-cxo" firstAttribute="top" secondItem="tmx-iG-lq4" secondAttribute="bottom" constant="8" id="IOB-mB-6lA"/>
+                            <constraint firstAttribute="trailing" secondItem="uvz-NH-WUU" secondAttribute="trailing" id="EWJ-C9-4qq"/>
+                            <constraint firstItem="T2E-uV-cxo" firstAttribute="top" secondItem="tmx-iG-lq4" secondAttribute="bottom" constant="7" id="IOB-mB-6lA"/>
                             <constraint firstItem="WWB-6B-gnV" firstAttribute="leading" secondItem="cqS-cN-jLV" secondAttribute="leading" id="OSD-Er-9bw"/>
-                            <constraint firstItem="tmx-iG-lq4" firstAttribute="top" secondItem="WWB-6B-gnV" secondAttribute="bottom" id="R4Z-cM-NFB"/>
+                            <constraint firstItem="tmx-iG-lq4" firstAttribute="top" secondItem="WWB-6B-gnV" secondAttribute="bottom" constant="1" id="R4Z-cM-NFB"/>
                             <constraint firstAttribute="trailing" secondItem="tmx-iG-lq4" secondAttribute="trailing" id="R63-LX-joG"/>
                             <constraint firstItem="T2E-uV-cxo" firstAttribute="trailing" secondItem="cqS-cN-jLV" secondAttribute="trailingMargin" id="X8n-gt-7es"/>
                             <constraint firstAttribute="trailing" secondItem="WWB-6B-gnV" secondAttribute="trailing" id="YGQ-zP-Ehd"/>
-                            <constraint firstItem="WWB-6B-gnV" firstAttribute="top" secondItem="6rz-qJ-Rac" secondAttribute="bottom" constant="8" id="Zoa-wq-nrY"/>
-                            <constraint firstItem="tmx-iG-lq4" firstAttribute="top" secondItem="WWB-6B-gnV" secondAttribute="bottom" id="eYI-5I-AG1"/>
+                            <constraint firstItem="WWB-6B-gnV" firstAttribute="top" secondItem="6rz-qJ-Rac" secondAttribute="bottom" id="Zoa-wq-nrY"/>
+                            <constraint firstItem="tmx-iG-lq4" firstAttribute="top" secondItem="WWB-6B-gnV" secondAttribute="bottom" constant="1" id="eYI-5I-AG1"/>
                             <constraint firstItem="T2E-uV-cxo" firstAttribute="leading" secondItem="cqS-cN-jLV" secondAttribute="leadingMargin" id="fSS-ds-PYR"/>
                             <constraint firstItem="bY8-8K-g83" firstAttribute="centerX" secondItem="cqS-cN-jLV" secondAttribute="centerX" id="ifc-39-9fg"/>
+                            <constraint firstItem="uvz-NH-WUU" firstAttribute="top" secondItem="WWB-6B-gnV" secondAttribute="bottom" id="o6H-Db-ze1"/>
                         </constraints>
                     </view>
                     <connections>
@@ -490,6 +555,7 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="opm-wr-0ar">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -498,6 +564,7 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                                 </connections>
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iI5-ot-mjK">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="d5m-86-rhf"/>
@@ -511,21 +578,32 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                                 <color key="tintColor" red="0.16862745100000001" green="0.57647058819999997" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evaluation Review" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kve-ZF-r7J">
+                                <rect key="frame" x="119" y="32" width="137.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0KC-NO-pmM">
+                                <rect key="frame" x="0.0" y="60" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="vZt-9l-9SJ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="0KC-NO-pmM" firstAttribute="top" secondItem="Kve-ZF-r7J" secondAttribute="bottom" constant="7.5" id="01m-GZ-73f"/>
+                            <constraint firstItem="0KC-NO-pmM" firstAttribute="leading" secondItem="Mof-Kl-97h" secondAttribute="leading" id="4es-ed-8hh"/>
                             <constraint firstItem="Sc3-M3-yE2" firstAttribute="top" secondItem="opm-wr-0ar" secondAttribute="bottom" id="7Wr-38-jtr"/>
-                            <constraint firstItem="iI5-ot-mjK" firstAttribute="top" secondItem="cp5-8F-D93" secondAttribute="bottom" constant="8" id="8y2-KU-air"/>
+                            <constraint firstItem="iI5-ot-mjK" firstAttribute="top" secondItem="cp5-8F-D93" secondAttribute="bottom" id="8y2-KU-air"/>
                             <constraint firstAttribute="trailing" secondItem="iI5-ot-mjK" secondAttribute="trailing" id="KfT-EQ-YuP"/>
                             <constraint firstItem="Kve-ZF-r7J" firstAttribute="centerX" secondItem="Mof-Kl-97h" secondAttribute="centerX" id="UGU-IL-3Fy"/>
                             <constraint firstItem="opm-wr-0ar" firstAttribute="leading" secondItem="Mof-Kl-97h" secondAttribute="leading" id="fk7-NZ-3rK"/>
                             <constraint firstAttribute="trailing" secondItem="opm-wr-0ar" secondAttribute="trailing" id="hk6-Sd-3WR"/>
                             <constraint firstItem="opm-wr-0ar" firstAttribute="top" secondItem="iI5-ot-mjK" secondAttribute="bottom" id="iUs-rF-k4r"/>
-                            <constraint firstItem="Kve-ZF-r7J" firstAttribute="top" secondItem="cp5-8F-D93" secondAttribute="bottom" constant="20" id="rdg-kQ-1sL"/>
+                            <constraint firstAttribute="trailing" secondItem="0KC-NO-pmM" secondAttribute="trailing" id="oS7-oV-Exl"/>
+                            <constraint firstItem="Kve-ZF-r7J" firstAttribute="top" secondItem="cp5-8F-D93" secondAttribute="bottom" constant="12" id="rdg-kQ-1sL"/>
                             <constraint firstItem="iI5-ot-mjK" firstAttribute="leading" secondItem="Mof-Kl-97h" secondAttribute="leading" id="zXm-9Q-emU"/>
                         </constraints>
                     </view>
@@ -550,6 +628,7 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S2e-4f-cYy">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="2Vp-Ph-m50"/>
@@ -562,21 +641,34 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                                 </items>
                                 <color key="tintColor" red="0.16862745100000001" green="0.57647058819999997" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="help_toolbar.png" translatesAutoresizingMaskIntoConstraints="NO" id="hVN-gh-xl6"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="help_toolbar.png" translatesAutoresizingMaskIntoConstraints="NO" id="hVN-gh-xl6">
+                                <rect key="frame" x="28" y="87" width="319" height="416"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVG-Hp-0at">
+                                <rect key="frame" x="170" y="32" width="35.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YYp-Cr-Kdq">
+                                <rect key="frame" x="0.0" y="64" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="b6G-gy-2TU"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hVN-gh-xl6" firstAttribute="centerX" secondItem="ay2-hv-arJ" secondAttribute="centerX" id="2cg-cm-UnC"/>
                             <constraint firstItem="hVN-gh-xl6" firstAttribute="top" secondItem="S2e-4f-cYy" secondAttribute="bottom" constant="23" id="Eak-ej-6q4"/>
                             <constraint firstItem="S2e-4f-cYy" firstAttribute="leading" secondItem="hVN-gh-xl6" secondAttribute="trailing" constant="-347" id="Qcf-M0-u6P"/>
-                            <constraint firstItem="S2e-4f-cYy" firstAttribute="top" secondItem="ige-G8-P5x" secondAttribute="bottom" constant="8" id="Upl-eD-js3"/>
+                            <constraint firstItem="YYp-Cr-Kdq" firstAttribute="leading" secondItem="ay2-hv-arJ" secondAttribute="leading" id="Tjc-AK-ewm"/>
+                            <constraint firstItem="S2e-4f-cYy" firstAttribute="top" secondItem="ige-G8-P5x" secondAttribute="bottom" id="Upl-eD-js3"/>
                             <constraint firstItem="nVG-Hp-0at" firstAttribute="centerX" secondItem="ay2-hv-arJ" secondAttribute="centerX" id="V9E-rh-hpS"/>
-                            <constraint firstItem="nVG-Hp-0at" firstAttribute="top" secondItem="ige-G8-P5x" secondAttribute="bottom" constant="20" id="ZBg-HO-ZYv"/>
+                            <constraint firstItem="nVG-Hp-0at" firstAttribute="top" secondItem="ige-G8-P5x" secondAttribute="bottom" constant="12" id="ZBg-HO-ZYv"/>
+                            <constraint firstItem="YYp-Cr-Kdq" firstAttribute="top" secondItem="S2e-4f-cYy" secondAttribute="bottom" id="dfT-wP-CSX"/>
+                            <constraint firstAttribute="trailing" secondItem="YYp-Cr-Kdq" secondAttribute="trailing" id="dmg-Fd-Bxr"/>
                             <constraint firstItem="S2e-4f-cYy" firstAttribute="leading" secondItem="ay2-hv-arJ" secondAttribute="leading" id="ejj-sX-cgW"/>
                             <constraint firstAttribute="trailing" secondItem="S2e-4f-cYy" secondAttribute="trailing" id="vD4-ix-G2w"/>
                         </constraints>
@@ -584,7 +676,7 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RIu-6p-ctg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="681" y="-1281"/>
+            <point key="canvasLocation" x="656.79999999999995" y="-800.14992503748135"/>
         </scene>
         <!--EULA -->
         <scene sceneID="Uev-Xq-D91">
@@ -599,6 +691,7 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="3oM-1L-eIU">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
                                     <barButtonItem enabled="NO" width="80" style="plain" id="xAe-9X-2Z8"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Oh3-rY-lxp"/>
@@ -610,9 +703,11 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                                 </items>
                             </toolbar>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="al6-Z6-LQB">
+                                <rect key="frame" x="0.0" y="179" width="375" height="429"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gsO-aq-VzK">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="9Bt-pm-uRF"/>
@@ -621,19 +716,31 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                                 </items>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="agreement_header.png" translatesAutoresizingMaskIntoConstraints="NO" id="LpF-Fb-aPM"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="agreement_header.png" translatesAutoresizingMaskIntoConstraints="NO" id="LpF-Fb-aPM">
+                                <rect key="frame" x="63" y="91" width="249" height="55"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gyx-ay-8GV">
+                                <rect key="frame" x="0.0" y="64" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="nx9-dc-R5n"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="3oM-1L-eIU" firstAttribute="leading" secondItem="mA6-Rk-Xp0" secondAttribute="leading" id="1OO-iv-9GH"/>
                             <constraint firstItem="3oM-1L-eIU" firstAttribute="top" secondItem="al6-Z6-LQB" secondAttribute="bottom" constant="15" id="4xF-rF-mNt"/>
-                            <constraint firstItem="gsO-aq-VzK" firstAttribute="top" secondItem="mss-kR-wSb" secondAttribute="bottom" constant="8" id="Kit-Le-Pu7"/>
+                            <constraint firstItem="Gyx-ay-8GV" firstAttribute="leading" secondItem="mA6-Rk-Xp0" secondAttribute="leading" id="9Cd-yx-gIT"/>
+                            <constraint firstItem="gsO-aq-VzK" firstAttribute="top" secondItem="mss-kR-wSb" secondAttribute="bottom" id="Kit-Le-Pu7"/>
                             <constraint firstItem="D23-Xd-O8w" firstAttribute="top" secondItem="3oM-1L-eIU" secondAttribute="bottom" id="OcN-Uc-zsU"/>
                             <constraint firstItem="al6-Z6-LQB" firstAttribute="leading" secondItem="mA6-Rk-Xp0" secondAttribute="leading" id="Phj-cq-LOf"/>
                             <constraint firstItem="LpF-Fb-aPM" firstAttribute="centerX" secondItem="mA6-Rk-Xp0" secondAttribute="centerX" id="U66-Lt-Ufu"/>
                             <constraint firstItem="gsO-aq-VzK" firstAttribute="leading" secondItem="mA6-Rk-Xp0" secondAttribute="leading" id="ZpT-AH-Egf"/>
+                            <constraint firstAttribute="trailing" secondItem="Gyx-ay-8GV" secondAttribute="trailing" id="ZqD-EO-Kzo"/>
                             <constraint firstAttribute="trailing" secondItem="gsO-aq-VzK" secondAttribute="trailing" id="bIU-Oy-ZJy"/>
                             <constraint firstItem="al6-Z6-LQB" firstAttribute="top" secondItem="LpF-Fb-aPM" secondAttribute="bottom" constant="33" id="g9U-Qj-1uN"/>
+                            <constraint firstItem="Gyx-ay-8GV" firstAttribute="top" secondItem="gsO-aq-VzK" secondAttribute="bottom" id="jLq-nq-LLu"/>
                             <constraint firstItem="LpF-Fb-aPM" firstAttribute="top" secondItem="gsO-aq-VzK" secondAttribute="bottom" constant="27" id="lkf-XB-BnB"/>
                             <constraint firstAttribute="trailing" secondItem="3oM-1L-eIU" secondAttribute="trailing" id="s45-qN-a61"/>
                             <constraint firstAttribute="trailing" secondItem="al6-Z6-LQB" secondAttribute="trailing" id="uJf-ms-GHJ"/>
@@ -645,7 +752,7 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OwQ-sd-Gkc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="791" y="674"/>
+            <point key="canvasLocation" x="789.60000000000002" y="673.31334332833592"/>
         </scene>
     </scenes>
     <resources>

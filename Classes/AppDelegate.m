@@ -31,6 +31,23 @@ AppManager *appMgr;
     // Override point for customization after application launch.
     appMgr = [AppManager singletonAppManager];
  
+    // set status bar color
+//    UIView *view=[[UIView alloc] initWithFrame:CGRectMake(0, 0,[UIScreen mainScreen].bounds.size.width, 20)];
+//    view.backgroundColor = [UIColor colorWithRed:(249.0/255) green:(249.0/255) blue:(249.0/255) alpha:1.0];
+//    [self.window.rootViewController.view addSubview:view];
+    
+    
+    // status bar style and visibility
+    [UIApplication sharedApplication].statusBarHidden = NO;
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    
+    // change status bar color
+    UIView *statusBar = [[UIApplication sharedApplication] valueForKey:@"statusBar"] ;
+    if ([statusBar respondsToSelector:NSSelectorFromString(@"setBackgroundColor:")] ) {
+        statusBar.backgroundColor = [UIColor colorWithRed:(249.0/255) green:(249.0/255) blue:(249.0/255) alpha:1.0];
+    }
+    
+
     
     // Set the application defaults
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];

@@ -47,6 +47,24 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    
+    self.navigationController.navigationBarHidden = YES;
+    
+    // status bar style and visibility
+    [UIApplication sharedApplication].statusBarHidden = NO;
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    
+    // change status bar color
+    UIView *statusBar = [[UIApplication sharedApplication] valueForKey:@"statusBar"] ;
+    if ([statusBar respondsToSelector:NSSelectorFromString(@"setBackgroundColor:")] ) {
+        statusBar.backgroundColor = [UIColor colorWithRed:(249.0/255) green:(249.0/255) blue:(249.0/255) alpha:1.0];
+    }
+    
+    
+}
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];

@@ -56,6 +56,7 @@
     self.navigationItem.title = @"Info";
     self.labelVersionInfo.text = [NSString stringWithFormat:@"%@ %@", [self getVersionString], [self getBuildString]];
     
+    
 }
 
 
