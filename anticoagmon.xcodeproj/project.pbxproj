@@ -18,6 +18,7 @@
 		3705125E1330FC8E00608AAD /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3705125C1330FC8E00608AAD /* MainWindow.xib */; };
 		370512671330FC8E00608AAD /* AboutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370512651330FC8E00608AAD /* AboutView.xib */; };
 		3705126A1330FC8E00608AAD /* HelpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370512681330FC8E00608AAD /* HelpView.xib */; };
+		370D68621DC91D2B001FB1D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370D68611DC91D2B001FB1D1 /* LaunchScreen.storyboard */; };
 		371597441373284300E5FB2E /* review.png in Resources */ = {isa = PBXBuildFile; fileRef = 3715973F1373284300E5FB2E /* review.png */; };
 		371597451373284300E5FB2E /* restart.png in Resources */ = {isa = PBXBuildFile; fileRef = 371597401373284300E5FB2E /* restart.png */; };
 		371597461373284300E5FB2E /* back_to_last.png in Resources */ = {isa = PBXBuildFile; fileRef = 371597411373284300E5FB2E /* back_to_last.png */; };
@@ -96,6 +97,8 @@
 		37E3936E1395F74B005C461D /* HelpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37E3936C1395F74B005C461D /* HelpVC.xib */; };
 		37E393701395F85F005C461D /* help_toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 37E3936F1395F85F005C461D /* help_toolbar.png */; };
 		37E9A67C138469AE008D08FF /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 37E9A67B138469AE008D08FF /* background.png */; };
+		37EAE4721DC940CA00DA06D7 /* review@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37EAE4701DC940CA00DA06D7 /* review@3x.png */; };
+		37EAE4731DC940CA00DA06D7 /* review@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37EAE4711DC940CA00DA06D7 /* review@2x.png */; };
 		37EB42C2138AAA35001A4A64 /* help_icon_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 37EB42C1138AAA35001A4A64 /* help_icon_white.png */; };
 		37EBFB381333E20F00185EFF /* DTConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBFB371333E20F00185EFF /* DTConnector.m */; };
 		37F6AC181395C7B10093263B /* info_icon_18x18.png in Resources */ = {isa = PBXBuildFile; fileRef = 37F6AC161395C7B10093263B /* info_icon_18x18.png */; };
@@ -155,6 +158,7 @@
 		3705125D1330FC8E00608AAD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		370512661330FC8E00608AAD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AboutView.xib; sourceTree = "<group>"; };
 		370512691330FC8E00608AAD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HelpView.xib; sourceTree = "<group>"; };
+		370D68611DC91D2B001FB1D1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3715973F1373284300E5FB2E /* review.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = review.png; sourceTree = "<group>"; };
 		371597401373284300E5FB2E /* restart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = restart.png; sourceTree = "<group>"; };
 		371597411373284300E5FB2E /* back_to_last.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_to_last.png; sourceTree = "<group>"; };
@@ -250,6 +254,8 @@
 		37E3936C1395F74B005C461D /* HelpVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpVC.xib; sourceTree = "<group>"; };
 		37E3936F1395F85F005C461D /* help_toolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help_toolbar.png; sourceTree = "<group>"; };
 		37E9A67B138469AE008D08FF /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		37EAE4701DC940CA00DA06D7 /* review@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "review@3x.png"; sourceTree = "<group>"; };
+		37EAE4711DC940CA00DA06D7 /* review@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "review@2x.png"; sourceTree = "<group>"; };
 		37EB42C1138AAA35001A4A64 /* help_icon_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help_icon_white.png; sourceTree = "<group>"; };
 		37EBFB361333E20F00185EFF /* DTConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTConnector.h; sourceTree = "<group>"; };
 		37EBFB371333E20F00185EFF /* DTConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTConnector.m; sourceTree = "<group>"; };
@@ -314,6 +320,7 @@
 		3705123B1330FC8D00608AAD = {
 			isa = PBXGroup;
 			children = (
+				370D68611DC91D2B001FB1D1 /* LaunchScreen.storyboard */,
 				37DD408C1D94669A0030B3A5 /* Main.storyboard */,
 				3781E4D31D905F3E00FD8C84 /* Default-568h@2x.png */,
 				AC04F51014755B3A00A60AFB /* Settings.bundle */,
@@ -345,6 +352,8 @@
 		370512501330FC8E00608AAD /* anticoagmon */ = {
 			isa = PBXGroup;
 			children = (
+				37EAE4701DC940CA00DA06D7 /* review@3x.png */,
+				37EAE4711DC940CA00DA06D7 /* review@2x.png */,
 				37B026CD13438518009BB5C0 /* 08-chat.png */,
 				37D47BFF1369A40F0070482C /* 103-map.png */,
 				37B026B513438261009BB5C0 /* 111-user.png */,
@@ -602,6 +611,7 @@
 				371597451373284300E5FB2E /* restart.png in Resources */,
 				371597461373284300E5FB2E /* back_to_last.png in Resources */,
 				371597471373284300E5FB2E /* next.png in Resources */,
+				370D68621DC91D2B001FB1D1 /* LaunchScreen.storyboard in Resources */,
 				371597481373284300E5FB2E /* back.png in Resources */,
 				37C2C0D4137FFF1800CFDD40 /* statement_icon_highlighted.png in Resources */,
 				37C2C0D5137FFF1800CFDD40 /* statement_icon.png in Resources */,
@@ -610,6 +620,7 @@
 				37C2C0DA137FFFEF00CFDD40 /* recommendation_header.png in Resources */,
 				37C2C0DD1380017A00CFDD40 /* describe_pt_header.png in Resources */,
 				37C2C0DE1380017A00CFDD40 /* eval_guide_header.png in Resources */,
+				37EAE4731DC940CA00DA06D7 /* review@2x.png in Resources */,
 				374A744D1381BABD00F48FD9 /* EulaViewController.xib in Resources */,
 				37F9C5DD1382C4DE00B35A48 /* orange_i.png in Resources */,
 				37F9C5DE1382C4DE00B35A48 /* green_i.png in Resources */,
@@ -642,6 +653,7 @@
 				375BC87013968D4600491014 /* eval_guide_header@2x.png in Resources */,
 				375BC87113968D4600491014 /* describe_pt_header@2x.png in Resources */,
 				375BC87613968D7900491014 /* help_toolbar@2x.png in Resources */,
+				37EAE4721DC940CA00DA06D7 /* review@3x.png in Resources */,
 				375BC87713968D7900491014 /* done_icon_down@2x.png in Resources */,
 				375BC87813968D7900491014 /* Done_icon@2x.png in Resources */,
 				375BC87A13968DB900491014 /* ptt_icon@2x.png in Resources */,
