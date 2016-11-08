@@ -590,7 +590,7 @@
 				LastUpgradeCheck = 0800;
 				TargetAttributes = {
 					370512451330FC8E00608AAD = {
-						DevelopmentTeam = Z827RBGAJC;
+						DevelopmentTeam = J8992FE8QS;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -886,7 +886,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = Z827RBGAJC;
+				DEVELOPMENT_TEAM = J8992FE8QS;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -896,7 +896,7 @@
 				INFOPLIST_FILE = "anticoagmon/anticoagmon-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cdc.iiu.PTT-Advisor";
+				PRODUCT_BUNDLE_IDENTIFIER = "gov.cdc.iiu.PTT-Advisor";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -909,7 +909,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
-				DEVELOPMENT_TEAM = Z827RBGAJC;
+				DEVELOPMENT_TEAM = J8992FE8QS;
 				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "anticoagmon/anticoagmon-Prefix.pch";
@@ -918,7 +918,7 @@
 				INFOPLIST_FILE = "anticoagmon/anticoagmon-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cdc.iiu.PTT-Advisor";
+				PRODUCT_BUNDLE_IDENTIFIER = "gov.cdc.iiu.PTT-Advisor";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
