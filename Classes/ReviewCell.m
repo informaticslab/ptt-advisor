@@ -90,7 +90,7 @@ AppManager *appMgr;
     }
     
     if (currIndexPath.section == 0)
-        formattedText = [NSString stringWithFormat:@"%ld.  %@", currIndexPath.row + 1, nodeText];
+        formattedText = [NSString stringWithFormat:@"%tu.  %@", currIndexPath.row + 1, nodeText];
     else
         formattedText = [NSString stringWithFormat:@"%lu.  %@", (unsigned long)[appMgr.dc.visitedNodes getNodeCount], nodeText];
     

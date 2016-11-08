@@ -36,16 +36,6 @@
                                 </items>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </toolbar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPB-Sn-6M5">
-                                <rect key="frame" x="169" y="557" width="82" height="30"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
-                                <state key="normal" title="Read EULA">
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <state key="highlighted" backgroundImage="survey_button_down.png">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="J0g-X6-Ol6">
                                 <rect key="frame" x="20" y="95" width="335" height="328"/>
                                 <subviews>
@@ -145,7 +135,6 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                             <constraint firstItem="QVn-K6-BWy" firstAttribute="leading" secondItem="xbl-Ip-nAg" secondAttribute="leading" id="5V6-Qi-9kZ"/>
                             <constraint firstItem="8K8-Dd-2dM" firstAttribute="leading" secondItem="xbl-Ip-nAg" secondAttribute="leading" id="BAy-b6-7gl"/>
                             <constraint firstAttribute="trailing" secondItem="QVn-K6-BWy" secondAttribute="trailing" id="E91-wU-Uq8"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="VPB-Sn-6M5" secondAttribute="trailing" constant="108" id="FJ0-bf-Djg"/>
                             <constraint firstItem="J0g-X6-Ol6" firstAttribute="leading" secondItem="xbl-Ip-nAg" secondAttribute="leadingMargin" constant="4" id="Mn5-HD-I6G"/>
                             <constraint firstItem="J0g-X6-Ol6" firstAttribute="top" secondItem="QVn-K6-BWy" secondAttribute="bottom" constant="23" id="N1F-71-qim"/>
                             <constraint firstItem="QVn-K6-BWy" firstAttribute="top" secondItem="gcj-8H-rWP" secondAttribute="bottom" id="P2I-0W-Vvo"/>
@@ -154,7 +143,6 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                             <constraint firstItem="8K8-Dd-2dM" firstAttribute="top" secondItem="QVn-K6-BWy" secondAttribute="bottom" id="QnA-aa-CCw"/>
                             <constraint firstItem="pDe-ME-rba" firstAttribute="top" secondItem="QVn-K6-BWy" secondAttribute="bottom" constant="-32" id="RlE-1K-7qN"/>
                             <constraint firstAttribute="trailing" secondItem="8K8-Dd-2dM" secondAttribute="trailing" id="RzQ-oY-OSY"/>
-                            <constraint firstItem="PMO-wM-6Z9" firstAttribute="top" secondItem="VPB-Sn-6M5" secondAttribute="bottom" constant="80" id="TFa-gP-5IJ"/>
                             <constraint firstItem="pDe-ME-rba" firstAttribute="top" secondItem="gcj-8H-rWP" secondAttribute="bottom" constant="20" id="b2R-7W-MVH"/>
                             <constraint firstItem="QVn-K6-BWy" firstAttribute="leading" secondItem="xbl-Ip-nAg" secondAttribute="leading" id="dQ7-q8-OrZ"/>
                             <constraint firstItem="ARr-qo-N3E" firstAttribute="centerX" secondItem="xbl-Ip-nAg" secondAttribute="centerX" id="uqp-h0-2s5"/>
@@ -392,12 +380,21 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                                     <constraint firstAttribute="height" constant="1" id="HGA-Aa-V3h"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uy9-OJ-aHc">
+                                <rect key="frame" x="1" y="622" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="7ob-Z4-p0v"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="WTD-bI-aw9" firstAttribute="top" secondItem="Z1i-HL-39K" secondAttribute="bottom" constant="13" id="1BY-sM-oFd"/>
+                            <constraint firstAttribute="trailing" secondItem="uy9-OJ-aHc" secondAttribute="trailing" constant="-1" id="55u-3u-Z74"/>
                             <constraint firstAttribute="trailing" secondItem="v5m-2P-MVM" secondAttribute="trailing" id="7Lc-gP-bJ4"/>
                             <constraint firstItem="WTD-bI-aw9" firstAttribute="leading" secondItem="4Y1-RU-eEC" secondAttribute="leadingMargin" id="7VP-7V-8GI"/>
+                            <constraint firstItem="uy9-OJ-aHc" firstAttribute="leading" secondItem="4Y1-RU-eEC" secondAttribute="leading" constant="1" id="8Il-8K-eNg"/>
                             <constraint firstAttribute="leadingMargin" secondItem="lUv-WG-fd0" secondAttribute="leading" id="8mR-gS-yiq"/>
                             <constraint firstItem="mj3-NJ-bf2" firstAttribute="centerX" secondItem="QGZ-kI-7vJ" secondAttribute="centerX" id="9kf-or-1py"/>
                             <constraint firstItem="d4R-wK-zYN" firstAttribute="leading" secondItem="mj3-NJ-bf2" secondAttribute="trailing" constant="8" id="Bcm-wh-HNE"/>
@@ -431,6 +428,7 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                             <constraint firstItem="W23-fZ-vI0" firstAttribute="leading" secondItem="TeR-IZ-BqW" secondAttribute="trailing" constant="8" id="t25-pn-THa"/>
                             <constraint firstItem="TeR-IZ-BqW" firstAttribute="leading" secondItem="mj3-NJ-bf2" secondAttribute="leading" id="t8e-GD-lui"/>
                             <constraint firstItem="Z1i-HL-39K" firstAttribute="trailing" secondItem="SvA-Cs-EjL" secondAttribute="trailing" id="uym-IH-Je3"/>
+                            <constraint firstItem="SvA-Cs-EjL" firstAttribute="top" secondItem="uy9-OJ-aHc" secondAttribute="bottom" id="v7J-6S-rTa"/>
                             <constraint firstItem="lUv-WG-fd0" firstAttribute="top" secondItem="WTD-bI-aw9" secondAttribute="bottom" constant="8" symbolic="YES" id="wtd-7R-eaw"/>
                             <constraint firstItem="aD1-AD-lWC" firstAttribute="top" secondItem="d4R-wK-zYN" secondAttribute="bottom" constant="2" id="xyi-Hp-2hB"/>
                             <constraint firstAttribute="trailing" secondItem="Z1i-HL-39K" secondAttribute="trailing" id="ye8-Qg-QWA"/>
@@ -439,7 +437,12 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="barBtnBack" destination="TAL-LI-YNj" id="gyk-Yi-h1c"/>
+                        <outlet property="barBtnBackToLast" destination="UaH-0H-IDC" id="wXL-Ep-b7L"/>
                         <outlet property="barBtnItemFootnotes" destination="3bp-iN-UVz" id="jj4-w7-r29"/>
+                        <outlet property="barBtnNext" destination="Kg5-uq-6Pq" id="ARU-xn-ioA"/>
+                        <outlet property="barBtnRestartEval" destination="vF2-KU-Ehh" id="OUY-In-V1j"/>
+                        <outlet property="barBtnReviewEval" destination="qoH-yi-hn0" id="H7d-8H-KaQ"/>
                         <outlet property="btnAnswer1" destination="TeR-IZ-BqW" id="ESy-Ra-gRE"/>
                         <outlet property="btnAnswer2" destination="mj3-NJ-bf2" id="Fs4-Vd-1LY"/>
                         <outlet property="btnDone" destination="5VJ-Sn-yf1" id="8ef-J2-G1v"/>
@@ -768,7 +771,6 @@ Department of Pathology, Cedars-Sinai Hospital, Los Angeles California</string>
         <image name="restart.png" width="22" height="22"/>
         <image name="review.png" width="22" height="22"/>
         <image name="selected-button.png" width="218" height="43"/>
-        <image name="survey_button_down.png" width="127" height="37"/>
         <image name="unselected.png" width="218" height="43"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

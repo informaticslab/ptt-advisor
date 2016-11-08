@@ -98,7 +98,7 @@ VisitedDecisionNodes *visitedNodes;
     //NSUInteger answeredQuestions = [visitedNodes getNodeCount] - 1;
     NSUInteger currReviewQuestion = [visitedNodes getCurrentNodeIndex] + 1;
     
-    NSString *warningMessage = [NSString stringWithFormat:@"You are about to change your answer to Step %lu. Therefore any previous responses past Step %lu will be discarded and you will be presented with new questions and information at Step %lu. Would you like to continue?", (unsigned long)currReviewQuestion, (unsigned long)currReviewQuestion, currReviewQuestion +1];
+    NSString *warningMessage = [NSString stringWithFormat:@"You are about to change your answer to Step %tu. Therefore any previous responses past Step %tu will be discarded and you will be presented with new questions and information at Step %tu. Would you like to continue?", currReviewQuestion, currReviewQuestion, currReviewQuestion +1];
     
     newChoiceConnector = newChoice;
     
@@ -324,13 +324,13 @@ VisitedDecisionNodes *visitedNodes;
     if ([appMgr isDebugInfoEnabled]) {
         debugInfo = [NSString stringWithFormat:@"Tree %lu, Node %lu, Footnotes %@",(unsigned long)currNode.nodeId.treeNumber,(unsigned long)currNode.nodeId.nodeNumber, [currNode getFootnoteIdsAsDebugInfo]];
         if (reviewing) {
-            self.lblCurrentPageIndicator.text = [NSString stringWithFormat:@"Step %lu, %@",[visitedNodes getCurrentNodeIndex] +1, debugInfo];
+            self.lblCurrentPageIndicator.text = [NSString stringWithFormat:@"Step %tu, %@",[visitedNodes getCurrentNodeIndex] +1, debugInfo];
         } else {
             self.lblCurrentPageIndicator.text = [NSString stringWithFormat:@"Step %lu, %@",(unsigned long)[visitedNodes getNodeCount], debugInfo];
         }
     } else {
         if (reviewing)
-            self.lblCurrentPageIndicator.text = [NSString stringWithFormat:@"Step %lu",[visitedNodes getCurrentNodeIndex] +1];
+            self.lblCurrentPageIndicator.text = [NSString stringWithFormat:@"Step %tu",[visitedNodes getCurrentNodeIndex] +1];
         else
             self.lblCurrentPageIndicator.text = [NSString stringWithFormat:@"Step %lu",(unsigned long)[visitedNodes getNodeCount]];
     }
