@@ -385,12 +385,8 @@ VisitedDecisionNodes *visitedNodes;
         NSLog(@"Data saved");
         NSLog(@"%@", currVersion);
         
-        // Create the modal view controller
-        EulaViewController *eulaVC = [[EulaViewController alloc] initWithNibName:@"EulaViewController" bundle:nil];
         
-        // we are the delegate that is responsible for dismissing the help view
-        eulaVC.modalPresentationStyle = UIModalPresentationPageSheet;
-        [self presentModalViewController:eulaVC animated:YES];
+        [self performSegueWithIdentifier:@"presentLaunchEULA" sender:self];
         
     }
     
@@ -417,9 +413,9 @@ VisitedDecisionNodes *visitedNodes;
 -(void)viewDidAppear:(BOOL)animated
 {
     
-//    if (appMgr.agreedWithEula == FALSE) {
-//        [self presentEulaModalView];
-//    }
+    if (appMgr.agreedWithEula == FALSE) {
+        [self presentEulaModalView];
+    }
     
 }
 
