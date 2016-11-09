@@ -26,6 +26,7 @@
 		371597481373284300E5FB2E /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 371597431373284300E5FB2E /* back.png */; };
 		371D3E2913CB90B50005C383 /* AppSurveyService.m in Sources */ = {isa = PBXBuildFile; fileRef = 371D3E2813CB90B50005C383 /* AppSurveyService.m */; };
 		372C06381DCCBE390060B091 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 372C06371DCCBE390060B091 /* splash.png */; };
+		373ED7031DD2CCA300E46E2B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373ED7021DD2CCA300E46E2B /* Images.xcassets */; };
 		37497B8C134E3B74003A1C39 /* Done_icon_updated.png in Resources */ = {isa = PBXBuildFile; fileRef = 37497B8B134E3B74003A1C39 /* Done_icon_updated.png */; };
 		37497B90134E3C64003A1C39 /* button_down_shorter.png in Resources */ = {isa = PBXBuildFile; fileRef = 37497B8E134E3C64003A1C39 /* button_down_shorter.png */; };
 		37497B91134E3C64003A1C39 /* button_regular_shorter.png in Resources */ = {isa = PBXBuildFile; fileRef = 37497B8F134E3C64003A1C39 /* button_regular_shorter.png */; };
@@ -180,6 +181,7 @@
 		371D3E2713CB90B50005C383 /* AppSurveyService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSurveyService.h; sourceTree = "<group>"; };
 		371D3E2813CB90B50005C383 /* AppSurveyService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppSurveyService.m; sourceTree = "<group>"; };
 		372C06371DCCBE390060B091 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		373ED7021DD2CCA300E46E2B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		37497B8B134E3B74003A1C39 /* Done_icon_updated.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Done_icon_updated.png; sourceTree = "<group>"; };
 		37497B8E134E3C64003A1C39 /* button_down_shorter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_down_shorter.png; sourceTree = "<group>"; };
 		37497B8F134E3C64003A1C39 /* button_regular_shorter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_regular_shorter.png; sourceTree = "<group>"; };
@@ -346,6 +348,7 @@
 		3705123B1330FC8D00608AAD = {
 			isa = PBXGroup;
 			children = (
+				373ED7021DD2CCA300E46E2B /* Images.xcassets */,
 				370D68611DC91D2B001FB1D1 /* LaunchScreen.storyboard */,
 				37DD408C1D94669A0030B3A5 /* Main.storyboard */,
 				3781E4D31D905F3E00FD8C84 /* Default-568h@2x.png */,
@@ -698,6 +701,7 @@
 				375BC86D13968D4600491014 /* recommendation_header@2x.png in Resources */,
 				375BC86E13968D4600491014 /* agreement_header@2x.png in Resources */,
 				375BC86F13968D4600491014 /* to_begin_header@2x.png in Resources */,
+				373ED7031DD2CCA300E46E2B /* Images.xcassets in Resources */,
 				375BC87013968D4600491014 /* eval_guide_header@2x.png in Resources */,
 				375BC87113968D4600491014 /* describe_pt_header@2x.png in Resources */,
 				375BC87613968D7900491014 /* help_toolbar@2x.png in Resources */,
@@ -883,6 +887,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -896,7 +902,7 @@
 				INFOPLIST_FILE = "anticoagmon/anticoagmon-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "gov.cdc.PTT-Advisor";
+				PRODUCT_BUNDLE_IDENTIFIER = gov.cdc.PTTAdvisor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -906,6 +912,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -918,7 +926,7 @@
 				INFOPLIST_FILE = "anticoagmon/anticoagmon-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "gov.cdc.PTT-Advisor";
+				PRODUCT_BUNDLE_IDENTIFIER = gov.cdc.PTTAdvisor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
